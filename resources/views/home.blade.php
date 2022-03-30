@@ -77,7 +77,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                            <li class="submenu">
+                            {{-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -85,7 +85,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
 
@@ -200,12 +200,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <h6>About Us</h6>
                                 <h2>We Leave A Delicious Memory For You</h2>
                             </div>
-                            <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant"
-                                    target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS
-                                framework. You can download and feel free to use this website template layout for your
-                                restaurant business. You are allowed to use this template for commercial purposes.
-                                <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload
-                                website. Please contact us for more information.</p>
+                            <p>The Parisian is a French style brasserie as founded by Tarzi Cenador a native of Paris, in an effort to recreate the ambience and food of his homeland. An upbeat, lively atmosphere flavored by unique French music immediately puts you in a Parisian frame of mind.
+
+                                Our menu combines French Classics with a modern twist accompanied by unique selections of  vegetables and sauces, as well as exclusive French, Washington State and California wine selections.
+
+                                We offer a full bar with exclusive craft cocktails plus a selection of 30 wines by the glass and a reserve list of high end wines.</p>
                             <div class="row">
                                 <div class="col-4">
                                     <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -222,7 +221,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="col-lg-6 col-md-6 col-xs-12">
                         <div class="right-content">
                             <div class="thumb">
-                                <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                                <a rel="nofollow" href="https://www.youtube.com/watch?v=X2jakwIVLbY"><i class="fa fa-play"></i></a>
                                 <img src="assets/images/about-video-bg.jpg" alt="">
                             </div>
                         </div>
@@ -285,8 +284,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-01.png" alt="">
                                                                 <h4>Fresh Chicken Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>chicken is a main ingredient. Other ingredients include mayonnaise,
+                                                                    hard-boiled egg, celery, onion, pepper, pickles and a variety of mustards.</p>
                                                                 <div class="price">
                                                                     <h6>$10.50</h6>
                                                                 </div>
@@ -296,8 +295,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-02.png" alt="">
                                                                 <h4>Orange Juice</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>it comes in several different varieties, including blood orange,
+                                                                    navel oranges, valencia orange, clementine, and tangerine.</p>
                                                                 <div class="price">
                                                                     <h6>$8.50</h6>
                                                                 </div>
@@ -307,8 +306,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-03.png" alt="">
                                                                 <h4>Fruit Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>consisting of various kinds of fruit, sometimes served in a liquid, either their own juices or a syrup. In different forms,
+                                                                    fruit salad can be served as an appetizer, a side salad, or a dessert.</p>
                                                                 <div class="price">
                                                                     <h6>$9.90</h6>
                                                                 </div>
@@ -324,8 +323,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-04.png" alt="">
                                                                 <h4>Eggs Omelette</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>made from beaten eggs, fried with butter or oil in a frying pan.
+                                                                    It is quite common for the omelette to be folded around fillings such as chives, vegetables, and mushrooms.</p>
                                                                 <div class="price">
                                                                     <h6>$6.50</h6>
                                                                 </div>
@@ -334,9 +333,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-05.png" alt="">
-                                                                <h4>Dollma Pire</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <h4>Lentil Soup</h4>
+                                                                <p>based on lentils; it may be vegetarian or include meat, and may use brown,
+                                                                    red, yellow, green or black lentils, with or without the husk.</p>
                                                                 <div class="price">
                                                                     <h6>$5.00</h6>
                                                                 </div>
@@ -346,8 +345,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-06.png" alt="">
                                                                 <h4>Omelette & Cheese</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>cheddars, mozzarella, and alpine cheeses like Gruyère all melt perfectly for an omelet,
+                                                                    but other cheeses like feta, parmesan, or manchego can be added too.</p>
                                                                 <div class="price">
                                                                     <h6>$4.10</h6>
                                                                 </div>
@@ -367,8 +366,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-04.png" alt="">
                                                                 <h4>Eggs Omelette</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>made from beaten eggs, fried with butter or oil in a frying pan.
+                                                                    It is quite common for the omelette to be folded around fillings such as chives, vegetables, and mushrooms.</p>
                                                                 <div class="price">
                                                                     <h6>$14</h6>
                                                                 </div>
@@ -377,9 +376,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-05.png" alt="">
-                                                                <h4>Dollma Pire</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <h4>Lentil Soup</h4>
+                                                                <p>based on lentils; it may be vegetarian or include meat, and may use brown,
+                                                                     red, yellow, green or black lentils, with or without the husk.</p>
                                                                 <div class="price">
                                                                     <h6>$18</h6>
                                                                 </div>
@@ -389,8 +388,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-06.png" alt="">
                                                                 <h4>Omelette & Cheese</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>cheddars, mozzarella, and alpine cheeses like Gruyère all melt perfectly for an omelet,
+                                                                    but other cheeses like feta, parmesan, or manchego can be added too.</p>
                                                                 <div class="price">
                                                                     <h6>$22</h6>
                                                                 </div>
@@ -406,8 +405,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-01.png" alt="">
                                                                 <h4>Fresh Chicken Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>chicken is a main ingredient. Other ingredients include mayonnaise,
+                                                                     hard-boiled egg, celery, onion, pepper, pickles and a variety of mustards.</p>
                                                                 <div class="price">
                                                                     <h6>$10</h6>
                                                                 </div>
@@ -417,8 +416,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-02.png" alt="">
                                                                 <h4>Orange Juice</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p> it comes in several different varieties, including blood orange,
+                                                                     navel oranges, valencia orange, clementine, and tangerine.</p>
                                                                 <div class="price">
                                                                     <h6>$20</h6>
                                                                 </div>
@@ -428,8 +427,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-03.png" alt="">
                                                                 <h4>Fruit Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>consisting of various kinds of fruit, sometimes served in a liquid, either their own juices or a syrup. In different forms,
+                                                                     fruit salad can be served as an appetizer, a side salad, or a dessert.</p>
                                                                 <div class="price">
                                                                     <h6>$30</h6>
                                                                 </div>
@@ -449,8 +448,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-05.png" alt="">
                                                                 <h4>Eggs Omelette</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>made from beaten eggs, fried with butter or oil in a frying pan.
+                                                                    It is quite common for the omelette to be folded around fillings such as chives, vegetables, and mushrooms.</p>
                                                                 <div class="price">
                                                                     <h6>$14</h6>
                                                                 </div>
@@ -460,8 +459,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-03.png" alt="">
                                                                 <h4>Orange Juice</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>it comes in several different varieties, including blood orange,
+                                                                    navel oranges, valencia orange, clementine, and tangerine.</p>
                                                                 <div class="price">
                                                                     <h6>$18</h6>
                                                                 </div>
@@ -471,8 +470,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-02.png" alt="">
                                                                 <h4>Fruit Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>consisting of various kinds of fruit, sometimes served in a liquid, either their own juices or a syrup. In different forms,
+                                                                    fruit salad can be served as an appetizer, a side salad, or a dessert.</p>
                                                                 <div class="price">
                                                                     <h6>$10</h6>
                                                                 </div>
@@ -488,8 +487,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-06.png" alt="">
                                                                 <h4>Fresh Chicken Salad</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>chicken is a main ingredient. Other ingredients include mayonnaise,
+                                                                    hard-boiled egg, celery, onion, pepper, pickles and a variety of mustards.</p>
                                                                 <div class="price">
                                                                     <h6>$8.50</h6>
                                                                 </div>
@@ -498,9 +497,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-01.png" alt="">
-                                                                <h4>Dollma Pire</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <h4>Lentil Soup</h4>
+                                                                <p>based on lentils; it may be vegetarian or include meat, and may use brown,
+                                                                    red, yellow, green or black lentils, with or without the husk.</p>
                                                                 <div class="price">
                                                                     <h6>$9</h6>
                                                                 </div>
@@ -510,8 +509,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                                             <div class="tab-item">
                                                                 <img src="assets/images/tab-item-04.png" alt="">
                                                                 <h4>Omelette & Cheese</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing
-                                                                    elit, sed do.</p>
+                                                                <p>made from beaten eggs, fried with butter or oil in a frying pan.
+                                                                    It is quite common for the omelette to be folded around fillings such as chives, vegetables, and mushrooms..</p>
                                                                 <div class="price">
                                                                     <h6>$11</h6>
                                                                 </div>
@@ -554,7 +553,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         <div class="left-text-content">
                             <p>© Copyright Klassy Cafe Co.
 
-                                <br>Design: TemplateMo
+                                <br>
                             </p>
                         </div>
                     </div>

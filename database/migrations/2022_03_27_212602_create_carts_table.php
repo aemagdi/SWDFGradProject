@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');;
             $table->unsignedBigInteger("food_id");
             $table->foreign('food_id')->references('id')->on('food')->onUpdate('cascade')->onDelete('cascade');;
-            $table->string("quantity")->nullable();
+            $table->integer("quantity")->nullable();
         });
     }
 

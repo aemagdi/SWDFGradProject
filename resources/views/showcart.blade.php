@@ -59,8 +59,8 @@ https://templatemo.com/tm-558-klassy-cafe
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="/#about">About</a></li>
 
                         <!--
                             <li class="submenu">
@@ -72,9 +72,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                 </ul>
                             </li>
                         -->
-                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                            <li class="submenu">
+                            <li class="scroll-to-section"><a href="/#menu">Menu</a></li>
+                            <li class="scroll-to-section"><a href="/#chefs">Chefs</a></li>
+                            {{-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -82,9 +82,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+                            <li class="scroll-to-section"><a href="/#reservation">Contact Us</a></li>
 
                             <li class="scroll-to-section" style="background-color:rgb(238, 132, 132)">
                                 @auth <a href="{{url('/showcart', Auth::id())}}">Cart[{{$count}}] </a> @endauth @guest Cart[0] @endguest</li>
@@ -127,8 +127,9 @@ https://templatemo.com/tm-558-klassy-cafe
 
             <tr>
                 <th style="padding: 30px">Food name</th>
-                <th style="padding: 30px"> Price</th>
+                <th style="padding: 30px">Price</th>
                 <th style="padding: 30px">Quantity</th>
+                <th style="padding: 30px">Total</th>
                 {{-- <th style="padding: 30px">Image</th> --}}
                 {{-- <th style="padding: 30px">Action</th> --}}
                 <th style="padding: 30px">Action</th>
@@ -138,12 +139,14 @@ https://templatemo.com/tm-558-klassy-cafe
         @csrf
              @foreach ($data as $data)
             <tr align="center">
+
                 <input type="text" name="foodname[]" value="{{$data->title}}" hidden="">
                 <td>{{$data->title}}</td>
                 <input type="text" name="price[]" value="{{$data->price}}" hidden="">
                 <td>${{$data->price}}</td>
                 <input type="text" name="quantity[]" value="{{$data->quantity}}" hidden="">
                 <td>{{$data->quantity}}</td>
+                <td>{{$data->price * $data->quantity}}</td>
 
                 {{-- <td><img height="150" width="150" src="/foodimages/{{$data->image}}" alt="Not found"></td> --}}
                 {{-- <td><a href="{{url('/editmenu',$data->id)}}">Edit</a></td> --}}
@@ -152,39 +155,45 @@ https://templatemo.com/tm-558-klassy-cafe
 
             @foreach ($data2 as $data2)
 
-            <tr style="position: relative; top: -50px; right:-390px">
+            <tr style="position: relative; top: -50px; right:-490px">
                 {{-- class="btn btn-warning" --}}
             <td><a href="{{url('/deletecartitem',$data2->id)}}" >Delete</a></td>
             </tr>
             @endforeach
         </table>
-        {{-- all encompassing div --}}
-        <div align="center" style="padding: 10px">
-           <div>
-            <button type="button" class="btn btn-primary" id="order">Order now</button>
-          </div>
+        @if ($count==0)
 
-        <div align="center" style="padding: 10px; display:none;" id="userdetails">
-            <div style="padding:10px">
-                <label style="padding: 10px">Name</label>
-                <input type="text" name="name" placeholder="Name">
-            </div>
-            <div>
-                <label style="padding: 10px">Phone number</label>
-                <input type="number" name="phone" placeholder="Phone number">
-            </div>
-            <div>
-                <label style="padding: 10px">Address</label>
-                <input type="text" name="address" placeholder="Address">
-            </div>
-            <div>
-                {{-- <input class="btn btn-info" type="submit" value="Submit"> --}}
-                <button type="submit"  class="btn btn-success" > Submit</button>
-                <button type="button" id="close" class="btn btn-danger">Close</button>
-            </div>
-        </div>
-        </div>
-    </div>
+        @else
+{{-- all encompassing div --}}
+<div align="center" style="padding: 10px">
+    <div>
+     <button type="button" class="btn btn-primary" id="order">Order now</button>
+   </div>
+
+ <div align="center" style="padding: 10px; display:none;" id="userdetails">
+     <div style="padding:10px">
+         <label style="padding: 10px">Name</label>
+         <input type="text" name="name" placeholder="Name" pattern="[A-Za-z\s]{3,}" required="" >
+     </div>
+     <div>
+         <label style="padding: 10px">Phone number</label>
+         <input type="text" name="phone" placeholder="Phone number" pattern="[0-9]{11}" required="">
+     </div>
+     <div>
+         <label style="padding: 10px">Address</label>
+         <input type="text" name="address" pattern="[a-zA-Z0-9\s]+" placeholder="Address" required="">
+     </div>
+     <div>
+         {{-- <input class="btn btn-info" type="submit" value="Submit"> --}}
+         <button type="submit"  class="btn btn-success" > Submit</button>
+         <button type="button" id="close" class="btn btn-danger">Close</button>
+         {{-- /(010|011|012|015|)\d{8}/ --}}
+     </div>
+     </div>
+</div>
+        @endif
+
+
 </form>
 
 

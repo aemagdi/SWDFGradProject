@@ -33,7 +33,7 @@ class HomeController extends Controller
             return view('admin.adminhome');
         }
         else if(Auth::id()) {
-            $count=Cart::where("user_id",$user_id)->count();
+            $count=Cart::where("user_id",Auth::id())->count();
             return view('home', compact("data","data2","count"));
         }
         else{
@@ -41,7 +41,7 @@ class HomeController extends Controller
             }
 
         }
-    
+
 
     public function addtocart (Request $request, $id){
         if(Auth::id()){
@@ -66,7 +66,11 @@ class HomeController extends Controller
         $count=Cart::where("user_id",$id)->count();
          $data=Cart::where("user_id",$id)->join('food','carts.food_id','=','food.id')->get();
         $data2=Cart::select('*')->where('user_id','=',$id)->get();
+
+        // $AllItemsPrice=Cart::select('*')->where("user_id",$id)->join(('food','carts.food_id','=','food.id')->sum('('food.price' * 'carts.quantity')');
+        // ,"AllItemsPrice"
         return view('showcart', compact("data","count","data2"));
+
         }
         else{
             return redirect()->back();
