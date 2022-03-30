@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Parisan res</title>
+    <title>Parisan Restaurant</title>
     <!--
 
 TemplateMo 558 Klassy Cafe
