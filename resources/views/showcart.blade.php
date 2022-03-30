@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Your Cart - The Parisian</title>
 <!--
 
 TemplateMo 558 Klassy Cafe
@@ -119,17 +119,34 @@ https://templatemo.com/tm-558-klassy-cafe
 
      {{--  function to alert user after Removing items From tha cart--}}
     <div id="top">
-           
     @if(session()->get('message'))
-    <div  class="alert alert-success">
-        <button   type="button" class="close"  data-dismiss="alert">
+        <div id="ItemRemoved" class="alert alert-success">
+            <button   type="button" class="close"  data-dismiss="alert">
 
-        </button>
-      {{(session()->get('message'))}}
+            </button>
+        {{(session()->get('message'))}}
 
+        </div>
+        @else
+        @endif
     </div>
-</div>
- @endif
+
+
+ {{--  function to alert user after adding items to tha cart--}}
+ <div id="top">
+    @if(session()->get('confirmOrderMessage'))
+        <div id="ConfirmClicked" class="alert alert-success">
+            <button   type="button" class="close"  data-dismiss="alert">
+
+            </button>
+        {{(session()->get('confirmOrderMessage'))}}
+
+        </div>
+        @else
+        @endif
+    </div>
+
+
     <!-- ***** Header Area End ***** -->
 
 
@@ -213,7 +230,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
 
 
-
+{{-- Function to make buttons appear/disappear when clicking order now --}}
 <script>
     //using jQuery
     $("#order").click(
@@ -231,10 +248,21 @@ https://templatemo.com/tm-558-klassy-cafe
     );
 </script>
 
+  {{-- Function to hide message that appears after you remove item to cart --}}
 
+  <script>
+    setTimeout(function() {
+       $("#ItemRemoved").fadeOut().empty();
+     }, 5000);
+  </script>
 
+{{-- Function to hide message that appears after click confirm order --}}
 
-
+<script>
+    setTimeout(function() {
+       $("#ConfirmClicked").fadeOut().empty();
+     }, 5000);
+  </script>
 
 
  <!-- jQuery -->

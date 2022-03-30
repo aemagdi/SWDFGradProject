@@ -105,7 +105,7 @@ class AdminController extends Controller
         $data->date= $request->date;
         $data->message= $request->message;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message2','Your reservation has been added recorded and we will be in touch shortly!');
     }
 
     public function vieweservations(){
@@ -177,7 +177,7 @@ class AdminController extends Controller
             $data2->each->delete();
                 }
 
-            return redirect()->back();}
+            return redirect()->back()->with('confirmOrderMessage','Your order has been sent to our kitchen. Expect a call from our delivery agent!');}
 
 
 
@@ -199,29 +199,29 @@ class AdminController extends Controller
                 ->orWhere('address','Like','%'.$keyword.'%')->get();
                 return view('admin.vieworders', compact("data","keyword"));
             }
-            
+
     public function create() // To add user as an admin
     {
         return view('admin.addmember');
-    
-    }   
+
+    }
      public function addnewadmin(Request $request) // To add user as an admin
      {
-        
+
             $data =new user;
-    
+
             $data->name=$request->name;
-    
+
             $data->email=$request->email;
-    
-            $data->password=bcrypt($request->password); 
-    
+
+            $data->password=bcrypt($request->password);
+
             $data->usertype='1';
-    
+
             $data->save();
-            
+
             return redirect()->back();
-        } 
+        }
 
 
         }

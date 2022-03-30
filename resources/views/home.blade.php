@@ -139,21 +139,40 @@ https://templatemo.com/tm-558-klassy-cafe
                     </a>
                     <!-- ***** Menu End ***** -->
 
-                    {{--  function to alert user after adding items to tha cart--}}
+                {{--  function to alert user after adding items to tha cart--}}
+                   <div id="ItemAdded">
+                       @if(session()->get('message'))
                     <div  class="alert alert-success">
-
-                         @if(session()->get('message')) 
-
                          <button   type="button" class="close"  data-dismiss="alert">
 
                          </button>
                            {{(session()->get('message'))}}
 
                     </div>
-  
-        @endif
 
 
+                    @else
+
+                    @endif
+                   </div>
+
+
+            {{--  function to alert user after sending reservation--}}
+            <div id="ReservationAdded">
+                @if(session()->get('message2'))
+            <div  class="alert alert-success">
+                <button   type="button" class="close"  data-dismiss="alert">
+
+                </button>
+                    {{(session()->get('message2'))}}
+
+            </div>
+
+
+            @else
+
+            @endif
+            </div>
 
 
 
@@ -171,7 +190,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="col-lg-4">
                         <div class="left-content">
                             <div class="inner-content">
-                                <h4>KlassyCafe</h4>
+                                <h4>The Parisian Cafe</h4>
                                 <h6>THE BEST EXPERIENCE</h6>
                                 <div class="main-white-button scroll-to-section">
                                     <a href="#reservation">Make A Reservation</a>
@@ -270,7 +289,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4 text-center">
                         <div class="section-heading">
-                            <h6>Klassy Week</h6>
+                            <h6>The Parisian Week</h6>
                             <h2>This Week’s Special Meal Offers</h2>
                         </div>
                     </div>
@@ -572,7 +591,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     </div>
                     <div class="col-lg-4 col-xs-12">
                         <div class="left-text-content">
-                            <p>© Copyright Klassy Cafe Co.
+                            <p>© Copyright The Parisian Cafe Co.
 
                                 <br>
                             </p>
@@ -581,6 +600,22 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
             </div>
         </footer>
+
+        {{-- Function to hide message that appears after you add item to cart --}}
+
+       <script>
+         setTimeout(function() {
+            $("#ItemAdded").fadeOut().empty();
+          }, 5000);
+       </script>
+
+{{-- Function to hide message that appears after you add reservation --}}
+
+<script>
+    setTimeout(function() {
+       $("#ReservationAdded").fadeOut().empty();
+     }, 7000);
+  </script>
 
         <!-- jQuery -->
         <script src="assets/js/jquery-2.1.0.min.js"></script>
