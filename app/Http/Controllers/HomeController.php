@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\Food;
 use App\Models\Chef;
 use App\Models\Cart;
+use App\Models\Order;
+use App\Models\Reservation;
 
 class HomeController extends Controller
 {
@@ -42,8 +44,21 @@ class HomeController extends Controller
 
         }
 
+        public function addReservation(Request $request){
+            $data = new Reservation;
 
-    public function addtocart (Request $request, $id){
+            $data->name =$request->name;
+            $data->email= $request->email;
+            $data->phone= $request->phone;
+            $data->guest= $request->guest;
+            $data->time= $request->time;
+            $data->date= $request->date;
+            $data->message= $request->message;
+            $data->save();
+            return redirect()->back()->with('message2','Your reservation has been added recorded and we will be in touch shortly!');
+        }
+
+    public function addToCart (Request $request, $id){
         if(Auth::id()){
         $user_id = Auth::id();
         $food_id=$id;
@@ -53,7 +68,7 @@ class HomeController extends Controller
         $cart->food_id=$food_id;
         $cart->quantity=$quantity;
         $cart->save();
-        return redirect()->back()->with('message','Your product has been added successfully.');
+        return redirect()->back()->with('message','Item has been added to the cart successfully.');
         }
         else {
 
@@ -61,7 +76,7 @@ class HomeController extends Controller
         }
     }
     // Request $request,
-    public function showcart ($id){
+    public function showCart ($id){
         if(Auth::id()==$id){
         $count=Cart::where("user_id",$id)->count();
          $data=Cart::where("user_id",$id)->join('food','carts.food_id','=','food.id')->get();
@@ -79,19 +94,39 @@ class HomeController extends Controller
         }
 
 
-    public function deletecartitem ($id){
+    public function deleteCartItem ($id){
         $data=Cart::find($id);
         $data->delete();
-        return redirect()->back()->with('message','Your product has been removed successfully.');
+        return redirect()->back()->with('message','Item has been removed successfully.');
                     }
 
-        public function admindashboard (){
-            $usertype=Auth::user()->usertype;
-            if ($usertype == '1'){
-            return view('admin.adminhome');}
-            else{
-                return redirect()->back();
-            } }
+
+
+     public function confirmOrder(Request $request){
+
+     foreach ($request->foodname as $key=>$foodname){
+
+        $data = new Order();
+        $data->foodname = $foodname;
+        $data->price = $request -> price[$key];
+        $data->quantity = $request -> quantity[$key];
+        $data->name = $request-> name;
+        $data->phone = $request-> phone;
+        $data->address = $request-> address;
+        $data->save();}
+
+        $userID = Auth::id();
+        if($userID){
+        $data2=Cart::select('*')->where('user_id','=',$userID)->get();
+        $data2->each->delete();
+            }
+
+        return redirect()->back()->with('confirmOrderMessage','Your order has been sent to our kitchen. Expect a call from our delivery agent!');}
+
+
+
+
+
 }
 // $usertype=Auth::user()->usertype;
 //             if ($usertype == '1'){

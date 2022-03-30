@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use App\Models\Food;
-use Illuminate\Http\Request;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth; //
+use App\Models\Food; //
+use Illuminate\Http\Request; //
+use App\Models\User; //
 use App\Models\Reservation;
-use App\Models\chef;
+use App\Models\chef; //
 use App\Models\Order;
-use App\Models\Cart;
+use App\Models\Cart; //
 use PhpParser\Node\Stmt\Foreach_;
 
 class AdminController extends Controller
@@ -22,7 +22,7 @@ class AdminController extends Controller
 //             }
 
 {
-    public function user(){
+    public function showUsers(){
             if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
             $data=user::all();
             return view('admin.user', compact("data"));}
@@ -31,7 +31,7 @@ class AdminController extends Controller
             }
         }
 
-    public function deleteuser($id){
+    public function deleteUsers($id){
         $usertype=Auth::user()->usertype;
             if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
             $data=user::find($id);
@@ -43,7 +43,7 @@ class AdminController extends Controller
         }
 
 
-    public function foodmenu(){
+    public function foodMenu(){
         $usertype=Auth::user()->usertype;
             if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
             $data= Food::all();
@@ -66,18 +66,18 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function deletemenu($id){
+    public function deleteMenu($id){
         $data=Food::find($id);
         $data->delete();
         return redirect()->back();}
 
 
-    public function editmenu($id){
+    public function editMenu($id){
             $data=Food::find($id);
             return view('admin.editmenu', compact("data"));}
 
 
-     public function updatefood(Request $request, $id){
+     public function updateFood(Request $request, $id){
         $data=Food::find($id);
         $data->title= $request->title;
         $data->price= $request->price;
@@ -94,27 +94,14 @@ class AdminController extends Controller
         return redirect('foodmenu');
     }
 
-    public function reservation(Request $request){
-        $data = new Reservation;
 
-        $data->name =$request->name;
-        $data->email= $request->email;
-        $data->phone= $request->phone;
-        $data->guest= $request->guest;
-        $data->time= $request->time;
-        $data->date= $request->date;
-        $data->message= $request->message;
-        $data->save();
-        return redirect()->back()->with('message2','Your reservation has been added recorded and we will be in touch shortly!');
-    }
-
-    public function vieweservations(){
+    public function viewReservations(){
         $data = Reservation::all();
         return view('admin.adminreservations', compact("data"));
     }
 
 
-    public function addchefs(Request $request){
+    public function addChefs(Request $request){
         $data = new chef();
         $data->name =$request->name;
         $data->description= $request->description;
@@ -128,23 +115,23 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function viewchefs(){
+    public function viewChefs(){
         $data = chef::all();
         return view('admin.adminchefs', compact("data"));
     }
 
 
-    public function deletechef($id){
+    public function deleteChef($id){
         $data=chef::find($id);
         $data->delete();
         return redirect()->back();}
 
 
-        public function editchef($id){
+        public function editChef($id){
             $data=chef::find($id);
             return view('admin.editchef', compact("data"));}
 
-    public function updatechef(Request $request, $id){
+    public function updateChef(Request $request, $id){
         $data=chef::find($id);
         $data->name=$request->name;
         $data->description=$request->description;
@@ -158,7 +145,17 @@ class AdminController extends Controller
         $data->save();
         return redirect('viewchefs'); }
 
-        public function confirmorder(Request $request){
+        //function for admin to go their dashboard
+        public function adminDashboard (){
+            $usertype=Auth::user()->usertype;
+            if ($usertype == '1'){
+            return view('admin.adminhome');}
+            else{
+                return redirect()->back();
+            } }
+
+
+        public function confirmOrder(Request $request){
 
             foreach ($request->foodname as $key=>$foodname){
 
@@ -183,13 +180,13 @@ class AdminController extends Controller
 
 
 
-            public function vieworders(){
+            public function viewOrders(){
                 $data = Order::all();
                 return view('admin.vieworders', compact("data"));
             }
 
 
-            public function searchorders(Request $request){
+            public function searchOrders(Request $request){
 
                 $keyword=$request->search;
 
@@ -200,12 +197,12 @@ class AdminController extends Controller
                 return view('admin.vieworders', compact("data","keyword"));
             }
 
-    public function create() // To add user as an admin
+    public function createAdmin() // To add user as an admin
     {
         return view('admin.addmember');
 
     }
-     public function addnewadmin(Request $request) // To add user as an admin
+     public function addNewAdmin(Request $request) // To add user as an admin
      {
 
             $data =new user;

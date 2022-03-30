@@ -19,55 +19,62 @@ Route::get('Admin', 'AdminController@create')->middleware('Adminposts');
 //     return view('welcome');
 // });
 
+
 Route::get('/', [HomeController::class,"index"]);
 
 Route::get('/redirects', [HomeController::class,"redirects"]);
 
-Route::get('/users', [AdminController::class,"user"]);
+Route::get('/users', [AdminController::class,"showUsers"]);
 
-Route::get('/deleteuser/{id}', [AdminController::class,"deleteuser"]);
+Route::get('/deleteuser/{id}', [AdminController::class,"deleteUsers"]);
 
-Route::get('/foodmenu', [AdminController::class,"foodmenu"]);
+Route::get('/foodmenu', [AdminController::class,"foodMenu"]);
 
 Route::post('/uploadfood', [AdminController::class,"uploadFood"]);
 
-Route::get('/deletemenu/{id}', [AdminController::class,"deletemenu"]);
+Route::get('/deletemenu/{id}', [AdminController::class,"deleteMenu"]);
 
-Route::get('/editmenu/{id}', [AdminController::class,"editmenu"]);
 
-Route::post('/update/{id}', [AdminController::class,"updatefood"]);
+Route::get('/editmenu/{id}', [AdminController::class,"editMenu"]);
 
-Route::post('/reservation', [AdminController::class,"reservation"]);
+Route::post('/update/{id}', [AdminController::class,"updateFood"]);
 
-Route::get('/viewreservations', [AdminController::class,"vieweservations"]);
+Route::post('/reservation', [HomeController::class,"addReservation"]); //ControllerChangedAndFixed
 
-Route::post('/addchefs', [AdminController::class,"addchefs"]);
+Route::get('/viewreservations', [AdminController::class,"viewReservations"]);
 
-Route::get('/viewchefs', [AdminController::class,"viewchefs"]);
+Route::post('/addchefs', [AdminController::class,"addChefs"]);
 
-Route::get('/deletechef/{id}', [AdminController::class,"deletechef"]);
 
-Route::get('/editchef/{id}', [AdminController::class,"editchef"]);
 
-Route::post('/updatechef/{id}', [AdminController::class,"updatechef"]);
+Route::get('/viewchefs', [AdminController::class,"viewChefs"]);
 
-Route::post('/addtocart/{id}', [HomeController::class,"addtocart"]);
+Route::get('/deletechef/{id}', [AdminController::class,"deleteChef"]);
 
-Route::get('/showcart/{id}', [HomeController::class,"showcart"]);
+Route::get('/editchef/{id}', [AdminController::class,"editChef"]);
 
-Route::get('/deletecartitem/{id}', [HomeController::class,"deletecartitem"]);
+Route::post('/updatechef/{id}', [AdminController::class,"updateChef"]);
 
-Route::get('/admindashboard', [HomeController::class,"admindashboard"]);
 
-Route::post('/confirmorder', [AdminController::class,"confirmorder"]);
 
-Route::get('/vieworders', [AdminController::class,"vieworders"]);
+Route::post('/addtocart/{id}', [HomeController::class,"addToCart"]);
 
-Route::get('/searchorders', [AdminController::class,"searchorders"]);
+Route::get('/showcart/{id}', [HomeController::class,"showCart"]);
 
-Route::get("/addmember",[AdminController::class,"create"]); // To add user as an admin
+Route::get('/deletecartitem/{id}', [HomeController::class,"deleteCartItem"]);
 
-Route::post("/store",[AdminController::class,"addnewadmin"]); // To add user as an admin
+Route::get('/admindashboard', [AdminController::class,"adminDashboard"]); //ControllerChangedAndFixed
+
+
+Route::post('/confirmorder', [HomeController::class,"confirmOrder"]); //alert
+
+Route::get('/vieworders', [AdminController::class,"viewOrders"]);
+
+Route::get('/searchorders', [AdminController::class,"searchOrders"]);
+
+Route::get("/addmember",[AdminController::class,"createAdmin"]); // To add user as an admin
+
+Route::post("/store",[AdminController::class,"addNewAdmin"]); // To add user as an admin
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

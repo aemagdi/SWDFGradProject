@@ -152,6 +152,12 @@ https://templatemo.com/tm-558-klassy-cafe
 
 
     {{-- class="container-scroller" style="position: relative; top: 150px; right:-40px" --}}
+    @if ($count==0)
+    <div id="top" align="center" >
+        <img src="assets/images/emptycart.png" alt="Image not found. Your cart is empty anyway!">
+        <button class="btn btn-primary"><a href="/#menu">Click to order</a></button>
+    </div>
+    @else
     <div id="top" >
         <table align="center" bgcolor=#e9967a border="2px">
 
@@ -192,9 +198,7 @@ https://templatemo.com/tm-558-klassy-cafe
             </tr>
             @endforeach
         </table>
-        @if ($count==0)
 
-        @else
 {{-- all encompassing div --}}
 <div align="center" style="padding: 10px">
     <div>
@@ -222,10 +226,10 @@ https://templatemo.com/tm-558-klassy-cafe
      </div>
      </div>
 </div>
-        @endif
-
 
 </form>
+</div>
+ @endif
 
 
 
