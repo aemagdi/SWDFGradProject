@@ -116,6 +116,20 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
         </div>
     </header>
+
+     {{--  function to alert user after Removing items From tha cart--}}
+    <div id="top">
+           
+    @if(session()->get('message'))
+    <div  class="alert alert-success">
+        <button   type="button" class="close"  data-dismiss="alert">
+
+        </button>
+      {{(session()->get('message'))}}
+
+    </div>
+</div>
+ @endif
     <!-- ***** Header Area End ***** -->
 
 

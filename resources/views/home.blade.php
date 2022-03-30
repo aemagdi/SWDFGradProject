@@ -138,6 +138,25 @@ https://templatemo.com/tm-558-klassy-cafe
                         {{-- <span>Menu</span> --}}
                     </a>
                     <!-- ***** Menu End ***** -->
+
+                    {{--  function to alert user after adding items to tha cart--}}
+                    <div  class="alert alert-success">
+
+                         @if(session()->get('message')) 
+
+                         <button   type="button" class="close"  data-dismiss="alert">
+
+                         </button>
+                           {{(session()->get('message'))}}
+
+                    </div>
+  
+        @endif
+
+
+
+
+
                     </nav>
                 </div>
             </div>

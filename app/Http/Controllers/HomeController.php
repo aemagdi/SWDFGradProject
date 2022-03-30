@@ -53,7 +53,7 @@ class HomeController extends Controller
         $cart->food_id=$food_id;
         $cart->quantity=$quantity;
         $cart->save();
-            return redirect()->back();
+        return redirect()->back()->with('message','Your product has been added successfuly');
         }
         else {
 
@@ -82,7 +82,7 @@ class HomeController extends Controller
     public function deletecartitem ($id){
         $data=Cart::find($id);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message','Your product has been removed successfuly');
                     }
 
         public function admindashboard (){
