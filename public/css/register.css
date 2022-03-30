@@ -1,0 +1,8 @@
+.bg-gray-100{
+    background: linear-gradient(to right, #fb5849 30%, #f78c83 70%);
+  }
+
+ #btn:hover{
+    background-color:#fb5849;
+    transition: 0.5s;
+}
