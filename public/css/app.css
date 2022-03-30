@@ -998,9 +998,19 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.float-none {
+  float: none;
+}
+.m-0 {
+  margin: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1074,6 +1084,18 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
+.mb-0 {
+  margin-bottom: 0px;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
 .block {
   display: block;
 }
@@ -1082,6 +1104,9 @@ select {
 }
 .inline-flex {
   display: inline-flex;
+}
+.table {
+  display: table;
 }
 .grid {
   display: grid;
@@ -1181,6 +1206,9 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.flex-grow {
+  flex-grow: 1;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1338,9 +1366,6 @@ select {
 .border-b {
   border-bottom-width: 1px;
 }
-.border-r {
-  border-right-width: 1px;
-}
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1359,10 +1384,6 @@ select {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1434,6 +1455,12 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
+.p-0 {
+  padding: 0px;
+}
+.p-3 {
+  padding: 0.75rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1490,6 +1517,14 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1522,6 +1557,12 @@ select {
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pl-0 {
+  padding-left: 0px;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -1585,9 +1626,6 @@ select {
 }
 .tracking-widest {
   letter-spacing: 0.1em;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
