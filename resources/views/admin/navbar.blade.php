@@ -117,6 +117,14 @@
             <span class="menu-title">Chefs</span>
           </a>
         </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{{url('/addmember')}}">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Add Admin User</span>
+          </a>
+        </li>
        {{--  <li class="nav-item menu-items">
           <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
             <span class="menu-icon">

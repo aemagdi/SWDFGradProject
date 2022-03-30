@@ -65,6 +65,10 @@ Route::get('/vieworders', [AdminController::class,"vieworders"]);
 
 Route::get('/searchorders', [AdminController::class,"searchorders"]);
 
+Route::get("/addmember",[AdminController::class,"create"]); // To add user as an admin
+
+Route::post("/store",[AdminController::class,"addnewadmin"]); // To add user as an admin
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

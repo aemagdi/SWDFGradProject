@@ -199,6 +199,29 @@ class AdminController extends Controller
                 ->orWhere('address','Like','%'.$keyword.'%')->get();
                 return view('admin.vieworders', compact("data","keyword"));
             }
+            
+    public function create() // To add user as an admin
+    {
+        return view('admin.addmember');
+    
+    }   
+     public function addnewadmin(Request $request) // To add user as an admin
+     {
+        
+            $data =new user;
+    
+            $data->name=$request->name;
+    
+            $data->email=$request->email;
+    
+            $data->password=bcrypt($request->password); 
+    
+            $data->usertype='1';
+    
+            $data->save();
+            
+            return redirect()->back();
+        } 
 
 
         }
