@@ -12,6 +12,7 @@
     <x-guest-layout>
         <x-jet-authentication-card >
             <x-slot name="logo">
+                <img src="/assets/images/white-logo.png" alt="">
             </x-slot>
     
             <x-jet-validation-errors class="mb-4" />
