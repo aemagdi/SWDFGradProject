@@ -197,13 +197,12 @@ https://templatemo.com/tm-558-klassy-cafe
                 <td>${{$data->price}}</td>
                 <input type="text" name="quantity[]" value="{{$data->quantity}}" hidden="">
                 <td>{{$data->quantity}}</td>
-                <td>{{$data->price * $data->quantity}}</td>
+                <td>${{$data->price * $data->quantity}}</td>
 
                 {{-- <td><img height="150" width="150" src="/foodimages/{{$data->image}}" alt="Not found"></td> --}}
                 {{-- <td><a href="{{url('/editmenu',$data->id)}}">Edit</a></td> --}}
            </tr >
             @endforeach
-
             @foreach ($data2 as $data2)
 
             <tr style="position: relative; top: -50px; right:-490px">
@@ -211,7 +210,12 @@ https://templatemo.com/tm-558-klassy-cafe
             <td><a href="{{url('/deletecartitem',$data2->id)}}" >Delete</a></td>
             </tr>
             @endforeach
+
+
         </table>
+        <div align="center" >
+            <div style="background-color:#e9967a; height :60px; width:200px; padding: 15px; font-weight:bold" align="center" ><tr><td>  Total Price = {{$totalPrice->totalPrice}}</td> </tr></div>
+        </div>
 
 {{-- all encompassing div --}}
 <div align="center" style="padding: 10px">
@@ -282,7 +286,7 @@ https://templatemo.com/tm-558-klassy-cafe
        $("#ConfirmClicked").fadeOut().empty();
      }, 5000);
   </script>
-  
+
 {{-- Function to hide message that appears after non-admin tries to access admin pages --}}
 
 <script>
