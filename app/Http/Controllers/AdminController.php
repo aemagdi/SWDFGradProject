@@ -45,9 +45,9 @@ public function __construct() {
 
 
     public function foodMenu(){
-        $usertype=Auth::user()->usertype;
-            $data= Food::all();
+        $data= Food::all();
         return view('admin.foodmenu', compact("data"));}
+
 
 
     public function uploadFood(Request $request){
@@ -144,12 +144,8 @@ public function __construct() {
 
         //function for admin to go their dashboard
         public function adminDashboard (){
-            $usertype=Auth::user()->usertype;
-            if ($usertype == '1'){
+
             return view('admin.adminhome');}
-            else{
-                return redirect()->back();
-            } }
 
 
         public function confirmOrder(Request $request){
