@@ -5,22 +5,24 @@
 <html lang="en">
 
 <head>
-  
-  @include('admin.admincss');
+
+  @include('admin.admincss')
 </head>
 <body>
+
+
   <div class="container-scroller">
 
-  @include('admin.navbar');
+  @include('admin.navbar')
 
   <div>
   </div>
 
   <form action="/store" method="POST">
-    
+
 
       @csrf
-     
+
    <div>
       <label for="" >Name</label>
       <input style="color:black;" type="text" name="name"  required >
@@ -42,8 +44,8 @@
   </div>
 
 
-  @include('admin.adminscript');
-  
+  @include('admin.adminscript')
+
 </body>
 
 </html>
