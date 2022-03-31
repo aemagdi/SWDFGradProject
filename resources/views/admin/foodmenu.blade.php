@@ -5,39 +5,54 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	 crossorigin="anonymous">
+
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	  crossorigin="anonymous"></script>
+
+
         @include('admin.admincss')
 
       </head>
 
   <body>
     @include('admin.navbar')
-    <div class="container-scroller" style="position: relative; top: -550px; right:-600px">
+    <div class="container-scroller" style="position: relative; top: -650px; right:-600px">
     <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
         @csrf
-        <div>
-            <label>Title</label>
+        <div class="mb-3">
+            <label  for="disabledTextInput" class="form-label">Title</label>
             <input type="text" style="color:blue" name="title" placeholder="Write a title" required>
-        </div>
+        </div class="mb-3">
         <div>
-            <label>Price</label>
+            <label  for="disabledTextInput" class="form-label">Price</label>
             <input type="number" style="color:blue" name="price" placeholder="price" required>
         </div>
-        <div>
-            <label>Image</label>
-            <input type="file" style="color:blue" name="image" required>
+
+        <div class="mb-3">
+            <label  for="disabledTextInput" class="form-label">Image</label>
+            <input  class="form-control" type="file" style="color:blue ; width:300px" name="image" required>
+
         </div>
-        <div>
-            <label>Description</label>
+        <div class="mb-3">
+            <label  for="disabledTextInput" class="form-label">Description</label>
             <input type="text" style="color:blue" name="description" placeholder="Write a description" required>
         </div>
+        
         <div style= "color:white">
-            <input type="submit" value="Save">
+            <input class="btn btn-primary" type="submit" value="Save">
         </div>
     </form>
 
     </div>
-    <div class="container-scroller" style="position: relative; top: -500px; right:-400px">
-        <table bgcolor="black" border="2px">
+
+
+    <div class="container-scroller" style="position: relative; top: -600px; right:-400px">
+        <table class="table table-Warning table-striped" style="width: 150px">
 
 
             <tr>

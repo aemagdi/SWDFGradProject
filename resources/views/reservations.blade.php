@@ -1,4 +1,4 @@
-    <section class="section" id="reservation">
+<section class="section" id="reservation">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 align-self-center">

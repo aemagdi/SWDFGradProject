@@ -11,6 +11,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"></script>
+
+
+
         @include('admin.admincss')
       </head>
 
@@ -18,18 +28,18 @@
     {{-- <div class="container-scroller" style="position: relative; top: 0px; right:-10px"> --}}
     @include('admin.navbar')
 
-    <div class="container-scroller" style="position: relative; top: -600px; right:-400px">
-        <table bgcolor="gray" border="2px">
+    <div class="container-scroller" style="position: relative; top: -580px; right:-400px ;left:-400;">
+        <table class="table table-Warning table-striped" style="width: 150px">
 
 
             <tr>
-                <th style="padding: 30px">Name</th>
-                <th style="padding: 30px">Email</th>
-                <th style="padding: 30px">Phone number</th>
-                <th style="padding: 30px">Number of guests</th>
-                <th style="padding: 30px">Time</th>
-                <th style="padding: 30px">Data</th>
-                <th style="padding: 30px">Message left</th>
+                <th style="padding: 10px">Name</th>
+                <th style="padding: 10px">Email</th>
+                <th style="padding: 10px">Phone number</th>
+                <th style="padding: 10px">Number of guests</th>
+                <th style="padding: 10px">Time</th>
+                <th style="padding: 10px">Data</th>
+                <th style="padding: 10px">Message left</th>
             </tr>
              @foreach ($data as $data)
             <tr align="center">

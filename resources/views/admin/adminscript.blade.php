@@ -1,4 +1,4 @@
-<!-- plugins:js -->
+{{-- <!-- plugins:js -->
 <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -17,4 +17,16 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="admin/assets/js/dashboard.js"></script>
-    <!-- End custom js for this page -->
+    <!-- End custom js for this page --> --}}
+
+
+
+
+      <!--   Core JS Files   -->
+      <script src="admin/assets/js/core/jquery.min.js" type="text/javascript"></script>
+      <script src="admin/assets/js/core/popper.min.js" type="text/javascript"></script>
+      <script src="admin/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+      <script src="admin/assets/js/plugins/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    
+      <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+      <script src="admin/assets/js/now-ui-dashboard.js" type="text/javascript"></script>

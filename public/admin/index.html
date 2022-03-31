@@ -1,1065 +1,1090 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
-    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
-  </head>
-  <body>
-    <div class="container-scroller">
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
-        </div>
-        <ul class="nav">
-          <li class="nav-item profile">
-            <div class="profile-desc">
-              <div class="profile-pic">
-                <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-                  <span class="count bg-success"></span>
-                </div>
-                <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                  <span>Gold Member</span>
-                </div>
-              </div>
-              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
-              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-                <a href="#" class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-settings text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-onepassword  text-info"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-calendar-today text-success"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
-              </span>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
-              </span>
-              <span class="menu-title">Basic UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
-              </span>
-              <span class="menu-title">Form Elements</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title">Tables</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
-              </span>
-              <span class="menu-title">Charts</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-contacts"></i>
-              </span>
-              <span class="menu-title">Icons</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
-              </span>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
-              </span>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row">
-          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
-          </div>
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="mdi mdi-menu"></span>
-            </button>
-            <ul class="navbar-nav w-100">
-              <li class="nav-item w-100">
-                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                  <input type="text" class="form-control" placeholder="Search products">
-                </form>
-              </li>
-            </ul>
-            <ul class="navbar-nav navbar-nav-right">
-              <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
-                  <h6 class="p-3 mb-0">Projects</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-file-outline text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Software Development</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-web text-info"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">UI Development</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-layers text-danger"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Software Testing</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">See all projects</p>
-                </div>
-              </li>
-              <li class="nav-item nav-settings d-none d-lg-block">
-                <a class="nav-link" href="#">
-                  <i class="mdi mdi-view-grid"></i>
-                </a>
-              </li>
-              <li class="nav-item dropdown border-left">
-                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                  <i class="mdi mdi-email"></i>
-                  <span class="count bg-success"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-                  <h6 class="p-3 mb-0">Messages</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
-                      <p class="text-muted mb-0"> 1 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
-                      <p class="text-muted mb-0"> 15 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
-                      <p class="text-muted mb-0"> 18 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">4 new messages</p>
-                </div>
-              </li>
-              <li class="nav-item dropdown border-left">
-                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                  <i class="mdi mdi-bell"></i>
-                  <span class="count bg-danger"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                  <h6 class="p-3 mb-0">Notifications</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-calendar text-success"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Event today</p>
-                      <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-settings text-danger"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Settings</p>
-                      <p class="text-muted ellipsis mb-0"> Update dashboard </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-link-variant text-warning"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Launch Admin</p>
-                      <p class="text-muted ellipsis mb-0"> New admin wow! </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">See all notifications</p>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
-                  <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
-                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
-                  </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
-                  <h6 class="p-3 mb-0">Profile</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-settings text-success"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Settings</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-logout text-danger"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Log out</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">Advanced settings</p>
-                </div>
-              </li>
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-              <span class="mdi mdi-format-line-spacing"></span>
-            </button>
-          </div>
-        </nav>
-        <!-- partial -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <div class="row">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card corona-gradient-card">
-                  <div class="card-body py-0 px-0 px-sm-3">
-                    <div class="row align-items-center">
-                      <div class="col-4 col-sm-3 col-xl-2">
-                        <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
-                      </div>
-                      <div class="col-5 col-sm-7 col-xl-8 p-0">
-                        <h4 class="mb-1 mb-sm-0">Want even more features?</h4>
-                        <p class="mb-0 font-weight-normal d-none d-sm-block">Check out our Pro version with 5 unique layouts!</p>
-                      </div>
-                      <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-                        <span>
-                          <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade to PRO</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$12.34</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-success ">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Potential growth</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$17.34</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-success">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Revenue current</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$12.34</h3>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-danger">
-                          <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Daily Income</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$31.53</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-success ">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Expense current</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Transaction History</h4>
-                    <canvas id="transaction-history" class="transaction-chart"></canvas>
-                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Transfer to Paypal</h6>
-                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                      </div>
-                      <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">$236</h6>
-                      </div>
-                    </div>
-                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Tranfer to Stripe</h6>
-                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                      </div>
-                      <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">$593</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-8 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex flex-row justify-content-between">
-                      <h4 class="card-title mb-1">Open Projects</h4>
-                      <p class="text-muted mb-1">Your data status</p>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="preview-list">
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-primary">
-                                <i class="mdi mdi-file-document"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Admin dashboard design</h6>
-                                <p class="text-muted mb-0">Broadcast web app mockup</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">15 minutes ago</p>
-                                <p class="text-muted mb-0">30 tasks, 5 issues </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-success">
-                                <i class="mdi mdi-cloud-download"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Wordpress Development</h6>
-                                <p class="text-muted mb-0">Upload new design</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">1 hour ago</p>
-                                <p class="text-muted mb-0">23 tasks, 5 issues </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-info">
-                                <i class="mdi mdi-clock"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Project meeting</h6>
-                                <p class="text-muted mb-0">New project discussion</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">35 minutes ago</p>
-                                <p class="text-muted mb-0">15 tasks, 2 issues</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-danger">
-                                <i class="mdi mdi-email-open"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Broadcast Mail</h6>
-                                <p class="text-muted mb-0">Sent release details to team</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">55 minutes ago</p>
-                                <p class="text-muted mb-0">35 tasks, 7 issues </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-warning">
-                                <i class="mdi mdi-chart-pie"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">UI Design</h6>
-                                <p class="text-muted mb-0">New application planning</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">50 minutes ago</p>
-                                <p class="text-muted mb-0">27 tasks, 4 issues </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Revenue</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$32123</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">11.38% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Sales</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$45850</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+8.3%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-wallet-travel text-danger ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Purchase</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$2039</h2>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">-2.1% </p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-monitor text-success ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Order Status</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </th>
-                            <th> Client Name </th>
-                            <th> Order No </th>
-                            <th> Product Cost </th>
-                            <th> Project </th>
-                            <th> Payment Mode </th>
-                            <th> Start Date </th>
-                            <th> Payment Status </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face1.jpg" alt="image" />
-                              <span class="pl-2">Henry Klein</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Dashboard </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face2.jpg" alt="image" />
-                              <span class="pl-2">Estella Bryan</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Website </td>
-                            <td> Cash on delivered </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-warning">Pending</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face5.jpg" alt="image" />
-                              <span class="pl-2">Lucy Abbott</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> App design </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-danger">Rejected</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" alt="image" />
-                              <span class="pl-2">Peter Gill</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Development </td>
-                            <td> Online Payment </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" alt="image" />
-                              <span class="pl-2">Sallie Reyes</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Website </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex flex-row justify-content-between">
-                      <h4 class="card-title">Messages</h4>
-                      <p class="text-muted mb-1 small">View all</p>
-                    </div>
-                    <div class="preview-list">
-                      <div class="preview-item border-bottom">
-                        <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face6.jpg" alt="image" class="rounded-circle" />
-                        </div>
-                        <div class="preview-item-content d-flex flex-grow">
-                          <div class="flex-grow">
-                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                              <h6 class="preview-subject">Leonard</h6>
-                              <p class="text-muted text-small">5 minutes ago</p>
-                            </div>
-                            <p class="text-muted">Well, it seems to be working now.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="preview-item border-bottom">
-                        <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face8.jpg" alt="image" class="rounded-circle" />
-                        </div>
-                        <div class="preview-item-content d-flex flex-grow">
-                          <div class="flex-grow">
-                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                              <h6 class="preview-subject">Luella Mills</h6>
-                              <p class="text-muted text-small">10 Minutes Ago</p>
-                            </div>
-                            <p class="text-muted">Well, it seems to be working now.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="preview-item border-bottom">
-                        <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face9.jpg" alt="image" class="rounded-circle" />
-                        </div>
-                        <div class="preview-item-content d-flex flex-grow">
-                          <div class="flex-grow">
-                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                              <h6 class="preview-subject">Ethel Kelly</h6>
-                              <p class="text-muted text-small">2 Hours Ago</p>
-                            </div>
-                            <p class="text-muted">Please review the tickets</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="preview-item border-bottom">
-                        <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face11.jpg" alt="image" class="rounded-circle" />
-                        </div>
-                        <div class="preview-item-content d-flex flex-grow">
-                          <div class="flex-grow">
-                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                              <h6 class="preview-subject">Herman May</h6>
-                              <p class="text-muted text-small">4 Hours Ago</p>
-                            </div>
-                            <p class="text-muted">Thanks a lot. It was easy to fix it .</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Portfolio Slide</h4>
-                    <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
-                      <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/Img_5.jpg" alt="">
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/img_6.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="d-flex py-4">
-                      <div class="preview-list w-100">
-                        <div class="preview-item p-0">
-                          <div class="preview-thumbnail">
-                            <img src="assets/images/faces/face12.jpg" class="rounded-circle" alt="">
-                          </div>
-                          <div class="preview-item-content d-flex flex-grow">
-                            <div class="flex-grow">
-                              <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                <h6 class="preview-subject">CeeCee Bass</h6>
-                                <p class="text-muted text-small">4 Hours Ago</p>
-                              </div>
-                              <p class="text-muted">Well, it seems to be working now.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-muted">Well, it seems to be working now. </p>
-                    <div class="progress progress-md portfolio-progress">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">To do list</h4>
-                    <div class="add-items d-flex">
-                      <input type="text" class="form-control todo-list-input" placeholder="enter task..">
-                      <button class="add btn btn-primary todo-list-add-btn">Add</button>
-                    </div>
-                    <div class="list-wrapper">
-                      <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Create invoice </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Meeting with Alita </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li class="completed">
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Plan weekend outing </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Pick up kids from school </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Visitors by Countries</h4>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="table-responsive">
-                          <table class="table">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-us"></i>
-                                </td>
-                                <td>USA</td>
-                                <td class="text-right"> 1500 </td>
-                                <td class="text-right font-weight-medium"> 56.35% </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-de"></i>
-                                </td>
-                                <td>Germany</td>
-                                <td class="text-right"> 800 </td>
-                                <td class="text-right font-weight-medium"> 33.25% </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-au"></i>
-                                </td>
-                                <td>Australia</td>
-                                <td class="text-right"> 760 </td>
-                                <td class="text-right font-weight-medium"> 15.45% </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-gb"></i>
-                                </td>
-                                <td>United Kingdom</td>
-                                <td class="text-right"> 450 </td>
-                                <td class="text-right font-weight-medium"> 25.00% </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-ro"></i>
-                                </td>
-                                <td>Romania</td>
-                                <td class="text-right"> 620 </td>
-                                <td class="text-right font-weight-medium"> 10.25% </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <i class="flag-icon flag-icon-br"></i>
-                                </td>
-                                <td>Brasil</td>
-                                <td class="text-right"> 230 </td>
-                                <td class="text-right font-weight-medium"> 75.00% </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="col-md-7">
-                        <div id="audience-map" class="vector-map"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
-            </div>
-          </footer>
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="assets/vendors/chart.js/Chart.min.js"></script>
-    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="assets/js/off-canvas.js"></script>
-    <script src="assets/js/hoverable-collapse.js"></script>
-    <script src="assets/js/misc.js"></script>
-    <script src="assets/js/settings.js"></script>
-    <script src="assets/js/todolist.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="assets/js/dashboard.js"></script>
-    <!-- End custom js for this page -->
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href=".admin/assets/css/now-ui-dashboard.css">
+  <link rel="shortcut icon" href=".admin/assets/img/favicon.png">
+  <title>Nucleo Outline Web Font</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <style media="screen">
+    /* http://meyerweb.com/eric/tools/css/reset/
+	 v2.0 | 20110126
+	 License: none (public domain)
+  */
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    main {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+
+
+    /* --------------------------------
+
+  Nucleo Outline Web Font - nucleoapp.com/
+  License - nucleoapp.com/license/
+  Created using IcoMoon - icomoon.io
+
+  -------------------------------- */
+
+    /* --------------------------------
+
+  Primary style
+
+  -------------------------------- */
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.6rem;
+      font-family: sans-serif;
+      color: #333333;
+      background: #efefef;
+    }
+
+    a {
+      color: #766acf;
+      text-decoration: none;
+    }
+
+    /* --------------------------------
+
+  Main components
+
+  -------------------------------- */
+    header {
+      text-align: center;
+      padding: 120px 0 0;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      margin-top: .6em;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    section h2 {
+      border-bottom: 1px solid #e2e2e2;
+      padding: 0 0 1em .2em;
+      margin-bottom: 1em;
+    }
+
+    ul::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    ul li {
+      width: 25%;
+      float: left;
+      padding: 16px 0;
+      text-align: center;
+      border-radius: .25em;
+      -webkit-transition: background 0.2s;
+      -moz-transition: background 0.2s;
+      transition: background 0.2s;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    ul li:hover {
+      background: #dbdbdb;
+    }
+
+    ul p,
+    ul em,
+    ul input {
+      display: inline-block;
+      font-size: 1rem;
+      color: #999999;
+      -webkit-user-select: auto;
+      -moz-user-select: auto;
+      -ms-user-select: auto;
+      user-select: auto;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+
+    ul p {
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    ul p::selection,
+    ul em::selection {
+      background: #766acf;
+      color: #efefef;
+    }
+
+    ul em {
+      margin-bottom: 8px;
+    }
+
+    ul em::before {
+      content: '[';
+    }
+
+    ul em::after {
+      content: ']';
+    }
+
+    ul input {
+      text-align: center;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+      ul li {
+        width: 20%;
+        float: left;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      ul li {
+        width: 12.5%;
+        float: left;
+        padding: 32px 0;
+      }
+    }
+
+    /* --------------------------------
+
+  Smart fixed navigation
+
+  -------------------------------- */
+
+    #cd-nav ul {
+      /* mobile first */
+      position: fixed;
+      width: 90%;
+      max-width: 400px;
+      max-height: 90%;
+      right: 5%;
+      bottom: 5%;
+      border-radius: 0.25em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: white;
+      visibility: hidden;
+      /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
+      overflow: hidden;
+      overflow-y: auto;
+      z-index: 1;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transform-origin: 100% 100%;
+      -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+      -o-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
+      -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
+      transition: transform 0.3s, visibility 0s 0.3s;
+    }
+
+    #cd-nav ul li {
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: block;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+    }
+
+    #cd-nav ul li:hover {
+      background-color: #FFF;
+    }
+
+    #cd-nav ul.is-visible {
+      visibility: visible;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
+      -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
+      transition: transform 0.3s, visibility 0s 0s;
+    }
+
+    #cd-nav li a {
+      display: block;
+      padding: 1em;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eff2f6;
+    }
+
+    #cd-nav li a:hover {
+      color: #333333;
+    }
+
+    #cd-nav li:last-child a {
+      border-bottom: none;
+    }
+
+    .cd-nav-trigger {
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      width: 44px;
+      height: 44px;
+      background: white;
+      border-radius: 0.25em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* image replacement */
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .cd-nav-trigger span {
+      /* the span element is used to create the menu icon */
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #333333;
+      top: 50%;
+      margin-top: -1px;
+      left: 50%;
+      margin-left: -10px;
+      -webkit-transition: background 0.3s;
+      -moz-transition: background 0.3s;
+      transition: background 0.3s;
+    }
+
+    .cd-nav-trigger span::before,
+    .cd-nav-trigger span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      background: inherit;
+      width: 100%;
+      height: 100%;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 0.3s, background 0s;
+      -moz-transition: -moz-transform 0.3s, background 0s;
+      transition: transform 0.3s, background 0s;
+    }
+
+    .cd-nav-trigger span::before {
+      top: -6px;
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    .cd-nav-trigger span::after {
+      bottom: -6px;
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    .cd-nav-trigger.menu-is-open {
+      box-shadow: none;
+    }
+
+    .cd-nav-trigger.menu-is-open span {
+      background: rgba(232, 74, 100, 0);
+    }
+
+    .cd-nav-trigger.menu-is-open span::before,
+    .cd-nav-trigger.menu-is-open span::after {
+      background: #333333;
+    }
+
+    .cd-nav-trigger.menu-is-open span::before {
+      top: 0;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+
+    .cd-nav-trigger.menu-is-open span::after {
+      bottom: 0;
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg);
+    }
+
+    .now-ui-icons {
+      display: inline-block;
+      font: normal normal normal 32px/1 'Nucleo Outline';
+      speak: none;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nucleo Outline Web Font v2.9</h1>
+    <p><a href="https://nucleoapp.com/?ref=creativetim">nucleoapp.com</a></p>
+  </header>
+  <div id="cd-nav">
+    <a id="cd-nav-trigger" href="#0" class="cd-nav-trigger">Menu<span></span></a>
+    <nav>
+      <ul id="cd-main-nav">
+        <li><a href="#arrows">Arrows</a></li>
+        <li><a href="#business">Business &amp; Finance</a></li>
+        <li><a href="#clothes">Clothes &amp; Accessories</a></li>
+        <li><a href="#design">Design &amp; Development</a></li>
+        <li><a href="#emoticons">Emoticons</a></li>
+        <li><a href="#files">Files &amp; Folders</a></li>
+        <li><a href="#medical">Healthcare &amp; Medical</a></li>
+        <li><a href="#loaders">Loaders</a></li>
+        <li><a href="#maps">Maps &amp; Location</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#objects">Objects</a></li>
+        <li><a href="#school">School &amp; Education</a></li>
+        <li><a href="#shopping">Shopping</a></li>
+        <li><a href="#sport">Sport</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#text">Text Editing</a></li>
+        <li><a href="#gestures">Touch Gestures</a></li>
+        <li><a href="#transportation">Transportation</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#interface">User Interface</a></li>
+        <li><a href="#users">Users</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="icons-wrapper">
+    <section id="arrows">
+      <h2>Arrows</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+          <p>arrows-1_cloud-download-93</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
+          <p>arrows-1_cloud-upload-94</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_minimal-down"></i>
+          <p>arrows-1_minimal-down</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_minimal-left"></i>
+          <p>arrows-1_minimal-left</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_minimal-right"></i>
+          <p>arrows-1_minimal-right</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_minimal-up"></i>
+          <p>arrows-1_minimal-up</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_refresh-69"></i>
+          <p>arrows-1_refresh-69</p>
+        </li>
+        <li>
+          <i class="now-ui-icons arrows-1_share-66"></i>
+          <p>arrows-1_share-66</p>
+        </li>
+      </ul>
+    </section>
+    <section id="business">
+      <h2>Business &amp; Finance</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons business_badge"></i>
+          <p>business_badge</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_bank"></i>
+          <p>business_bank</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_briefcase-24"></i>
+          <p>business_briefcase-24</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_bulb-63"></i>
+          <p>business_bulb-63</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_chart-bar-32"></i>
+          <p>business_chart-bar-32</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_chart-pie-36"></i>
+          <p>business_chart-pie-36</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_globe"></i>
+          <p>business_globe</p>
+        </li>
+        <li>
+          <i class="now-ui-icons business_money-coins"></i>
+          <p>business_money-coins</p>
+        </li>
+      </ul>
+    </section>
+    <section id="clothes">
+      <h2>Clothes &amp; Accessories</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons clothes_tie-bow"></i>
+          <p>clothes_tie-bow</p>
+        </li>
+      </ul>
+    </section>
+    <section id="design">
+      <h2>Design &amp; Development</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons design_app"></i>
+          <p>design_app</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design_bullet-list-67"></i>
+          <p>design_bullet-list-67</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design_image"></i>
+          <p>design_image</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design_palette"></i>
+          <p>design_palette</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design_scissors"></i>
+          <p>design_scissors</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design_vector"></i>
+          <p>design_vector</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design-2_html5"></i>
+          <p>design-2_html5</p>
+        </li>
+        <li>
+          <i class="now-ui-icons design-2_ruler-pencil"></i>
+          <p>design-2_ruler-pencil</p>
+        </li>
+      </ul>
+    </section>
+    <section id="emoticons">
+      <h2>Emoticons</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons emoticons_satisfied"></i>
+          <p>emoticons_satisfied</p>
+        </li>
+      </ul>
+    </section>
+    <section id="files">
+      <h2>Files &amp; Folders</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons files_box"></i>
+          <p>files_box</p>
+        </li>
+        <li>
+          <i class="now-ui-icons files_paper"></i>
+          <p>files_paper</p>
+        </li>
+        <li>
+          <i class="now-ui-icons files_single-copy-04"></i>
+          <p>files_single-copy-04</p>
+        </li>
+      </ul>
+    </section>
+    <section id="medical">
+      <h2>Healthcare &amp; Medical</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons health_ambulance"></i>
+          <p>health_ambulance</p>
+        </li>
+      </ul>
+    </section>
+    <section id="loaders">
+      <h2>Loaders</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons loader_gear spin"></i>
+          <p>loader_gear</p>
+        </li>
+        <li>
+          <i class="now-ui-icons loader_refresh spin"></i>
+          <p>loader_refresh</p>
+        </li>
+      </ul>
+    </section>
+    <section id="maps">
+      <h2>Maps &amp; Location</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons location_bookmark"></i>
+          <p>location_bookmark</p>
+        </li>
+        <li>
+          <i class="now-ui-icons location_compass-05"></i>
+          <p>location_compass-05</p>
+        </li>
+        <li>
+          <i class="now-ui-icons location_map-big"></i>
+          <p>location_map-big</p>
+        </li>
+        <li>
+          <i class="now-ui-icons location_pin"></i>
+          <p>location_pin</p>
+        </li>
+        <li>
+          <i class="now-ui-icons location_world"></i>
+          <p>location_world</p>
+        </li>
+      </ul>
+    </section>
+    <section id="media">
+      <h2>Media</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons media-1_album"></i>
+          <p>media-1_album</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-1_button-pause"></i>
+          <p>media-1_button-pause</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-1_button-play"></i>
+          <p>media-1_button-play</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-1_button-power"></i>
+          <p>media-1_button-power</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-1_camera-compact"></i>
+          <p>media-1_camera-compact</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-2_note-03"></i>
+          <p>media-2_note-03</p>
+        </li>
+        <li>
+          <i class="now-ui-icons media-2_sound-wave"></i>
+          <p>media-2_sound-wave</p>
+        </li>
+      </ul>
+    </section>
+    <section id="objects">
+      <h2>Objects</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons objects_diamond"></i>
+          <p>objects_diamond</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_globe"></i>
+          <p>objects_globe</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_key-25"></i>
+          <p>objects_key-25</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_planet"></i>
+          <p>objects_planet</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_spaceship"></i>
+          <p>objects_spaceship</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_support-17"></i>
+          <p>objects_support-17</p>
+        </li>
+        <li>
+          <i class="now-ui-icons objects_umbrella-13"></i>
+          <p>objects_umbrella-13</p>
+        </li>
+      </ul>
+    </section>
+    <section id="school">
+      <h2>School &amp; Education</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons education_agenda-bookmark"></i>
+          <p>education_agenda-bookmark</p>
+        </li>
+        <li>
+          <i class="now-ui-icons education_atom"></i>
+          <p>education_atom</p>
+        </li>
+        <li>
+          <i class="now-ui-icons education_glasses"></i>
+          <p>education_glasses</p>
+        </li>
+        <li>
+          <i class="now-ui-icons education_hat"></i>
+          <p>education_hat</p>
+        </li>
+        <li>
+          <i class="now-ui-icons education_paper"></i>
+          <p>education_paper</p>
+        </li>
+      </ul>
+    </section>
+    <section id="shopping">
+      <h2>Shopping</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons shopping_bag-16"></i>
+          <p>shopping_bag-16</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_basket"></i>
+          <p>shopping_basket</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_box"></i>
+          <p>shopping_box</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_cart-simple"></i>
+          <p>shopping_cart-simple</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_credit-card"></i>
+          <p>shopping_credit-card</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_delivery-fast"></i>
+          <p>shopping_delivery-fast</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_shop"></i>
+          <p>shopping_shop</p>
+        </li>
+        <li>
+          <i class="now-ui-icons shopping_tag-content"></i>
+          <p>shopping_tag-content</p>
+        </li>
+      </ul>
+    </section>
+    <section id="sport">
+      <h2>Sport</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons sport_trophy"></i>
+          <p>sport_trophy</p>
+        </li>
+        <li>
+          <i class="now-ui-icons sport_user-run"></i>
+          <p>sport_user-run</p>
+        </li>
+      </ul>
+    </section>
+    <section id="technology">
+      <h2>Technology</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons tech_controller-modern"></i>
+          <p>tech_controller-modern</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_headphones"></i>
+          <p>tech_headphones</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_laptop"></i>
+          <p>tech_laptop</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_mobile"></i>
+          <p>tech_mobile</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_tablet"></i>
+          <p>tech_tablet</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_tv"></i>
+          <p>tech_tv</p>
+        </li>
+        <li>
+          <i class="now-ui-icons tech_watch-time"></i>
+          <p>tech_watch-time</p>
+        </li>
+      </ul>
+    </section>
+    <section id="text">
+      <h2>Text Editing</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons text_align-center"></i>
+          <p>text_align-center</p>
+        </li>
+        <li>
+          <i class="now-ui-icons text_align-left"></i>
+          <p>text_align-left</p>
+        </li>
+        <li>
+          <i class="now-ui-icons text_bold"></i>
+          <p>text_bold</p>
+        </li>
+        <li>
+          <i class="now-ui-icons text_caps-small"></i>
+          <p>text_caps-small</p>
+        </li>
+      </ul>
+    </section>
+    <section id="gestures">
+      <h2>Touch Gestures</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons gestures_tap-01"></i>
+          <p>gestures_tap-01</p>
+        </li>
+      </ul>
+    </section>
+    <section id="transportation">
+      <h2>Transportation</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons transportation_air-baloon"></i>
+          <p>transportation_air-baloon</p>
+        </li>
+        <li>
+          <i class="now-ui-icons transportation_bus-front-12"></i>
+          <p>transportation_bus-front-12</p>
+        </li>
+      </ul>
+    </section>
+    <section id="travel">
+      <h2>Travel</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons travel_info"></i>
+          <p>travel_info</p>
+        </li>
+        <li>
+          <i class="now-ui-icons travel_istanbul"></i>
+          <p>travel_istanbul</p>
+        </li>
+      </ul>
+    </section>
+    <section id="interface">
+      <h2>User Interface</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons ui-1_bell-53"></i>
+          <p>ui-1_bell-53</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_calendar-60"></i>
+          <p>ui-1_calendar-60</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_check"></i>
+          <p>ui-1_check</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_lock-circle-open"></i>
+          <p>ui-1_lock-circle-open</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_send"></i>
+          <p>ui-1_send</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_settings-gear-63"></i>
+          <p>ui-1_settings-gear-63</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_simple-add"></i>
+          <p>ui-1_simple-add</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_simple-delete"></i>
+          <p>ui-1_simple-delete</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_simple-remove"></i>
+          <p>ui-1_simple-remove</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_zoom-bold"></i>
+          <p>ui-1_zoom-bold</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-2_chat-round"></i>
+          <p>ui-2_chat-round</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-2_favourite-28"></i>
+          <p>ui-2_favourite-28</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-2_like"></i>
+          <p>ui-2_like</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-2_settings-90"></i>
+          <p>ui-2_settings-90</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-2_time-alarm"></i>
+          <p>ui-2_time-alarm</p>
+        </li>
+        <li>
+          <i class="now-ui-icons ui-1_email-85"></i>
+          <p>ui-1_email-85</p>
+        </li>
+      </ul>
+    </section>
+    <section id="users">
+      <h2>Users</h2>
+      <ul>
+        <li>
+          <i class="now-ui-icons users_circle-08"></i>
+          <p>users_circle-08</p>
+        </li>
+        <li>
+          <i class="now-ui-icons users_single-02"></i>
+          <p>users_single-02</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script>
+    function SelectText(element) {
+      var doc = document,
+        text = element,
+        range, selection;
+      if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+      } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
+
+    function hasClass(ele, cls) {
+      return !!ele.getAttribute('class').match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+    }
+
+    window.onload = function() {
+      var trigger = document.getElementById('cd-nav-trigger'),
+        menu = document.getElementById('cd-main-nav'),
+        menuItems = menu.getElementsByTagName('li');
+      trigger.onclick = function toggleMenu() {
+        if (hasClass(trigger, 'menu-is-open')) {
+          trigger.setAttribute('class', 'cd-nav-trigger');
+          menu.setAttribute('class', '');
+        } else {
+          trigger.setAttribute('class', 'cd-nav-trigger menu-is-open');
+          menu.setAttribute('class', 'is-visible');
+        }
+      }
+
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].onclick = function closeMenu() {
+          trigger.setAttribute('class', 'cd-nav-trigger');
+          menu.setAttribute('class', '');
+        }
+      }
+    }
+  </script>
+</body>
+
 </html>
