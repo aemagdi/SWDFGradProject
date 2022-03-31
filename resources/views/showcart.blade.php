@@ -117,7 +117,7 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </header>
 
-     {{--  function to alert user after Removing items From tha cart--}}
+     {{--  Div to alert user after Removing items From tha cart--}}
     <div id="top">
     @if(session()->get('message'))
         <div id="ItemRemoved" class="alert alert-success">
@@ -132,7 +132,7 @@ https://templatemo.com/tm-558-klassy-cafe
     </div>
 
 
- {{--  function to alert user after adding items to tha cart--}}
+ {{--  Div to alert user after adding items to tha cart--}}
  <div id="top">
     @if(session()->get('confirmOrderMessage'))
         <div id="ConfirmClicked" class="alert alert-success">
@@ -145,7 +145,21 @@ https://templatemo.com/tm-558-klassy-cafe
         @else
         @endif
     </div>
+    {{-- notAdminError --}}
 
+    {{--  Div to alert user after trying to access admin's page--}}
+ <div id="adminPages">
+    @if(session()->get('notAdminError'))
+        <div id="ConfirmClicked" class="alert alert-success">
+            <button   type="button" class="close"  data-dismiss="alert">
+
+            </button>
+        {{(session()->get('notAdminError'))}}
+
+        </div>
+        @else
+        @endif
+    </div>
 
     <!-- ***** Header Area End ***** -->
 
@@ -216,7 +230,8 @@ https://templatemo.com/tm-558-klassy-cafe
      </div>
      <div>
          <label style="padding: 10px">Address</label>
-         <input type="text" name="address" pattern="[a-zA-Z0-9\s]+" placeholder="Address" required="">
+         {{-- pattern="[a-zA-Z0-9\s]+" --}}
+         <input type="text" name="address" pattern="{5,}" placeholder="Address" required="">
      </div>
      <div>
          {{-- <input class="btn btn-info" type="submit" value="Submit"> --}}
@@ -267,7 +282,14 @@ https://templatemo.com/tm-558-klassy-cafe
        $("#ConfirmClicked").fadeOut().empty();
      }, 5000);
   </script>
+  
+{{-- Function to hide message that appears after non-admin tries to access admin pages --}}
 
+<script>
+    setTimeout(function() {
+       $("#adminPages").fadeOut().empty();
+     }, 5000);
+  </script>
 
  <!-- jQuery -->
  <script src="assets/js/jquery-2.1.0.min.js"></script>

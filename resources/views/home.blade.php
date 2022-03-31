@@ -139,7 +139,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     </a>
                     <!-- ***** Menu End ***** -->
 
-                {{--  function to alert user after adding items to tha cart--}}
+                {{--  Div to alert user after adding items to tha cart--}}
                    <div id="ItemAdded">
                        @if(session()->get('message'))
                     <div  class="alert alert-success">
@@ -157,7 +157,7 @@ https://templatemo.com/tm-558-klassy-cafe
                    </div>
 
 
-            {{--  function to alert user after sending reservation--}}
+            {{--  Div to alert user after sending reservation--}}
             <div id="ReservationAdded">
                 @if(session()->get('message2'))
             <div  class="alert alert-success">
@@ -172,6 +172,23 @@ https://templatemo.com/tm-558-klassy-cafe
             @else
 
             @endif
+            </div>
+
+            {{--  Div to alert user after trying to access admin pages--}}
+            <div id="adminPages">
+                @if(session()->get('notAdminError'))
+             <div  class="alert alert-success">
+                  <button   type="button" class="close"  data-dismiss="alert">
+
+                  </button>
+                    {{(session()->get('notAdminError'))}}
+
+             </div>
+
+
+             @else
+
+             @endif
             </div>
 
 
@@ -614,6 +631,14 @@ https://templatemo.com/tm-558-klassy-cafe
 <script>
     setTimeout(function() {
        $("#ReservationAdded").fadeOut().empty();
+     }, 7000);
+  </script>
+
+{{-- Function to hide message that appears after non-admin tries to access admin pages--}}
+
+<script>
+    setTimeout(function() {
+       $("#adminPages").fadeOut().empty();
      }, 7000);
   </script>
 

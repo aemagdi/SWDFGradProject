@@ -12,6 +12,8 @@ use App\Models\Order;
 use App\Models\Cart; //
 use PhpParser\Node\Stmt\Foreach_;
 
+
+
 class AdminController extends Controller
 //Safe guard in every function to prevent regular user from accessing admin's pages
 // $usertype=Auth::user()->usertype;
@@ -22,36 +24,31 @@ class AdminController extends Controller
 //             }
 
 {
+
+public function __construct() {
+    $this->middleware('Adminpages');
+}
+
+
+
     public function showUsers(){
-            if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
             $data=user::all();
             return view('admin.user', compact("data"));}
-            else{
-                return redirect()->back();
-            }
-        }
+
 
     public function deleteUsers($id){
-        $usertype=Auth::user()->usertype;
-            if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
-            $data=user::find($id);
+        $data=user::find($id);
         $data->delete();
         return redirect()->back();}
-            else{
-                return redirect()->back();
-            }
-        }
+
+
 
 
     public function foodMenu(){
         $usertype=Auth::user()->usertype;
-            if (isset(Auth::user()->usertype) && (Auth::user()->usertype) == '1'){
             $data= Food::all();
         return view('admin.foodmenu', compact("data"));}
-            else{
-                return redirect()->back();
-            }
-        }
+
 
     public function uploadFood(Request $request){
         $data = new food;
