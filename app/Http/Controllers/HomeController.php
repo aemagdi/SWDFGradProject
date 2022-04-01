@@ -78,6 +78,7 @@ class HomeController extends Controller
     // Request $request,
     public function showCart($id)
     {
+        //here id is userID
         if (Auth::id() == $id) {
             $count = Cart::where("user_id", $id)->count();
             $data = Cart::where("user_id", $id)->join('food', 'carts.food_id', '=', 'food.id')->get();
@@ -89,7 +90,6 @@ class HomeController extends Controller
             $totalPrice = DB::table('carts')->join('food', 'carts.food_id', '=', 'food.id')
                 ->select(DB::raw('sum(food.price*carts.quantity) AS totalPrice'))
                 ->where('carts.user_id', '=', $id)->first();
-
             return view('showcart', compact("data", "count", "data2", "totalPrice"));
         } else {
             return redirect()->back();
@@ -99,6 +99,7 @@ class HomeController extends Controller
 
     public function deleteCartItem($id)
     {
+        //ID is cartID
         $data = Cart::find($id);
         $data->delete();
         return redirect()->back()->with('message', 'Item has been removed successfully.');

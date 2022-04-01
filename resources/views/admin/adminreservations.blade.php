@@ -41,6 +41,7 @@
                 <th style="padding: 10px">Time</th>
                 <th style="padding: 10px">Data</th>
                 <th style="padding: 10px ; width:20px;">Message left</th>
+                <th style="padding: 10px ; width:20px;">Action</th>
             </tr>
              @foreach ($data as $data)
             <tr align="left">
@@ -51,8 +52,8 @@
                 <td>{{$data->time}}</td>
                 <td>{{$data->date}}</td>
                 <td>{{$data->message}}</td>
-                {{-- <td><a href="{{url('/deletemenu',$data->id)}}">Delete</a></td>
-                <td><a href="{{url('/editmenu',$data->id)}}">Edit</a></td> --}}
+                <td><a href="{{url('/deletereservation',$data->id)}}">Delete</a></td>
+                {{-- <td><a href="{{url('/editmenu',$data->id)}}">Edit</a></td> --}}
             </tr>
             @endforeach
         </table>

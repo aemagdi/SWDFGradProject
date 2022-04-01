@@ -76,6 +76,10 @@ Route::get("/addmember",[AdminController::class,"createAdmin"]); // To add user 
 
 Route::post("/store",[AdminController::class,"addNewAdmin"]); // To add user as an admin
 
+Route::get('/deletereservation/{id}', [AdminController::class,"deleteReservationAdmin"]); //function to delete reservations in admin dashboard
+
+Route::get('/deleteorder/{id}', [AdminController::class,"deleteOrderAdmin"]); //function to delete orders in admin dashboard
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

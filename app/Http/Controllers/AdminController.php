@@ -214,6 +214,16 @@ public function __construct() {
         }
 
 
+        public function deleteReservationAdmin($id){
+            $data=Reservation::find($id);
+            $data->delete();
+            return redirect()->back();}
+
+        public function deleteOrderAdmin($id){
+            $data=Order::find($id);
+            $data->delete();
+            return redirect()->back();}
+
         }
 
 

@@ -56,7 +56,7 @@
                     <th style="padding: 10px">Price</th>
                     <th style="padding: 10px">Quantity</th>
                     <th style="padding: 10px">Total Price</th>
-
+                    <th style="padding: 10px">Action</th>
                 </tr>
                  @foreach ($data as $data)
                 <tr align="center">
@@ -68,9 +68,9 @@
                     <td>{{$data->quantity}}</td>
                     <td>${{$data->price*$data->quantity}}</td>
                     {{-- <td><img height="150" width="150" src="/chefimages/{{$data->image}}" alt="Not found"></td> --}}
-                    {{-- <td><a href="{{url('/editchef',$data->id)}}">Edit</a></td>
-                    <td><a href="{{url('/deletechef',$data->id)}}">Delete</a></td> --}}
-                </tr>
+                     {{-- <td><a href="{{url('/editchef',$data->id)}}">Edit</a></td> --}}
+                     <td><a href="{{url('/deleteorder',$data->id)}}">Delete</a></td>
+                    </tr>
                 @endforeach
             </table>
 
