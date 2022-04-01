@@ -19,31 +19,34 @@
 
       </head>
 
-  <body>
+  <body style=" overflow-x: hidden;">
+
     @include('admin.navbar')
-    <div class="container-scroller" style="position: relative; top: -650px; right:-600px">
-    <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
+
+    <div class="container-scroller"style="position: relative; top: -600px; right:-480px; width:400px; height:420px; border:3px solid #e9967a ; border-radius:12px" >
+    <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data" style="padding:10px ; margin :0 auto; width:300px">
         @csrf
+
         <div class="mb-3">
-            <label  for="disabledTextInput" class="form-label">Title</label>
+            <label for="disabledTextInput" class="form-label"  style="align-self: flex-start"> Food Title</label>
             <input type="text" style="color:blue" name="title" placeholder="Write a title" required>
-        </div class="mb-3">
-        <div>
-            <label  for="disabledTextInput" class="form-label">Price</label>
+        </div>
+        <div class="mb-3" >
+            <label for="disabledTextInput" class="form-label"  style="padding-right: 10px ; align-self: flex-start">Item's Price</label>
             <input type="number" style="color:blue" name="price" placeholder="price" required>
         </div>
 
         <div class="mb-3">
-            <label  for="disabledTextInput" class="form-label">Image</label>
-            <input  class="form-control" type="file" style="color:blue ; width:300px" name="image" required>
+            <label  for="disabledTextInput" class="form-label" style="padding-right: 10px ; align-self:flex-start">Image</label>
+            <input  class="form-control" type="file" style="color:blue ; width:220px" name="image" required>
 
         </div>
         <div class="mb-3">
-            <label  for="disabledTextInput" class="form-label">Description</label>
+            <label  for="disabledTextInput" class="form-label" style="align-self: flex-start">Description</label>
             <input type="text" style="color:blue" name="description" placeholder="Write a description" required>
         </div>
-        
-        <div style= "color:white">
+
+        <div style= "color:white ;">
             <input class="btn btn-primary" type="submit" value="Save">
         </div>
     </form>
@@ -51,7 +54,7 @@
     </div>
 
 
-    <div class="container-scroller" style="position: relative; top: -600px; right:-400px">
+    <div class="container-scroller" style="position: relative; top: -550px; right:-400px">
         <table class="table table-Warning table-striped" style="width: 150px">
 
 

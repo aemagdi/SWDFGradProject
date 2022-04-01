@@ -17,6 +17,9 @@
 
         @include('admin.admincss')
       </head>
+
+      <body style=" overflow-x: hidden;">
+
 {{-- <h1>Customer Orders</h1> --}}
 
 

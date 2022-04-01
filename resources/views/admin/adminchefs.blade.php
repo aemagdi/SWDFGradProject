@@ -4,52 +4,51 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	 crossorigin="anonymous">
+
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	  crossorigin="anonymous"></script>
+
+
         @include('admin.admincss')
 
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-         crossorigin="anonymous"></script>
-
-      </head>
-
-  <body>
-    <div class="container-scroller" style="position: relative; top: 0px; right:-10px">
+</head>
+<body style=" overflow-x: hidden;">
     @include('admin.navbar')
-    </div>
-    <div class="container-scroller" style="position: relative; top: -650px; right:-600px">
 
-        <form action="{{url('/addchefs')}}" method="post" enctype="multipart/form-data">
-
+    <div class="container-scroller" style="position: relative; top: -600px; right:-480px; width:400px; border:3px solid #e9967a ; border-radius:12px" >
+        <form action="{{url('/addchefs')}}" method="post" enctype="multipart/form-data" style="padding:10px ; margin :0 auto; width:300px">
             @csrf
             <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Chef's Name</label>
+                <label for="disabledTextInput" class="form-label"  style="align-self: flex-start">Chef's Name</label>
                 <input type="text" style="color:blue" name="name" placeholder="Enter chef's name" required>
             </div>
-            <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Chef's Picture</label>
-                <input type="file" style="color:blue" name="image" required>
+            <div class="mb-3" >
+                <label for="disabledTextInput" class="form-label"  style="padding-right: 10px ; align-self: flex-start">Chef's Picture</label>
+                <input  class="form-control" type="file" style="color:blue ; width:225px" name="image" required>
             </div>
             <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Chef's Description</label>
+                <label for="disabledTextInput" class="form-label"  style="align-self: flex-start">Chef's Description</label>
                 <input type="text" style="color:blue" name="description" placeholder="Enter chef's description" required>
             </div>
-            <div style= "color:white" >
-                <input class="btn btn-primary"  type="submit" value="Save" >
+            <div style= "color:white">
+                <input class="btn btn-primary" type="submit" value="Save">
             </div>
         </form>
     </div>
-
-
-    <div class="container-scroller" style="position: relative; top: -580px; right:-400px ;left:-400;">
+    <div class="container-scroller" style="position: relative; top: -550px; right:-400px">
         <table class="table table-Warning table-striped" style="width: 150px">
 
 
-            <tr align="center">
+            <tr>
                 <th style="padding: 30px">Chef's name</th>
                 <th style="padding: 30px">Chef's description</th>
                 <th style="padding: 30px">Image</th>
@@ -71,5 +70,8 @@
 
     </div>
     @include('admin.adminscript')
-  </body>
+
+
+
+</body>
 </html>

@@ -9,8 +9,10 @@
 
       </head>
 
-  <body  style="background-image: url(/assets/images/MicrosoftTeams-image.png);
-   background-repeat:no-repeat;">
+  <body  style="background-image: url(/assets/images/MicrosoftTeams-image11.png) ;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; ">
 
 
     <div class="container-scroller" style="position: relative; top: 0px; right:-10px">

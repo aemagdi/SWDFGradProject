@@ -8,32 +8,41 @@
         <base href="/public">
         @include('admin.admincss')
 
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"></script>
+
       </head>
 
   <body>
-    <div class="container-scroller" style="position: relative; top: 0px; right:-10px">
     @include('admin.navbar')
-    <div class="container-scroller" style="position: relative; top: 110px; right:-250px">
-        <form action="{{url('/updatechef',$data->id)}}" method="post" enctype="multipart/form-data">
+
+    <div  class="container-scroller" style="position: relative; top: -600px; right:-500px;width:400px; border:3px solid #e9967a ; border-radius:12px">
+
+        <form action="{{url('/updatechef',$data->id)}}" method="post" enctype="multipart/form-data" style="padding:20px">
             @csrf
-            <div>
-                <label>Chef's Name</label>
+            <div class="mb-3">
+                <label  for="disabledTextInput" class="form-label">Chef's Name</label>
                 <input type="text" style="color:blue" name="name" placeholder="Enter chef's name" value="{{$data->name}}" required>
             </div>
-            <div>
-                <label>Chef's Description</label>
+            <div class="mb-3">
+                <label  for="disabledTextInput" class="form-label">Chef's Description</label>
                 <input type="text" style="color:blue" name="description" placeholder="Enter chef's description" value="{{$data->description}}" required>
             </div>
-            <div>
-                <label>Old Picture</label>
+            <div class="mb-3">
+                <label  for="disabledTextInput" class="form-label">Old Picture</label>
                 <img height="150" width="150" src="/chefimages/{{$data->image}}" alt="Picture not found">            </div>
-            <div>
-                <label>New Picture</label>
-                <input type="file" name="image">
+            <div class="mb-3">
+                <label  for="disabledTextInput" class="form-label">New Picture</label>
+                <input  class="form-control" type="file" style="color:blue ; width:300px" name="image" >
             </div>
 
             <div style= "color:white">
-                <input type="submit" value="Update">
+                <input class="btn btn-primary" type="submit" value="Update">
             </div>
         </form>
     </div>

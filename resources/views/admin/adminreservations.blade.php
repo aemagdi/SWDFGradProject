@@ -24,12 +24,13 @@
         @include('admin.admincss')
       </head>
 
-  <body>
+  <body style=" overflow-x:hidden;">
     {{-- <div class="container-scroller" style="position: relative; top: 0px; right:-10px"> --}}
     @include('admin.navbar')
 
-    <div class="container-scroller" style="position: relative; top: -580px; right:-400px ;left:-400;">
-        <table class="table table-Warning table-striped" style="width: 150px">
+    <div class="container-scroller" style="position: relative; top: -580px; right:-400px ;left:-400;
+     overflow-x:auto;width:900px;height:500px;">
+        <table class="table table-Warning table-striped" style="width:50%;">
 
 
             <tr>
@@ -39,10 +40,10 @@
                 <th style="padding: 10px">Number of guests</th>
                 <th style="padding: 10px">Time</th>
                 <th style="padding: 10px">Data</th>
-                <th style="padding: 10px">Message left</th>
+                <th style="padding: 10px ; width:20px;">Message left</th>
             </tr>
              @foreach ($data as $data)
-            <tr align="center">
+            <tr align="left">
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
                 <td>{{$data->phone}}</td>

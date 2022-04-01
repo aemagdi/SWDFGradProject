@@ -1,21 +1,23 @@
 
 
 <div class="wrapper">
-  <div class="sidebar" style="background-color: brown">
+  <div class="sidebar" >
 <!--
     Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
 -->
-    <div class="logo">
+    <div class="logo"  >
 
-      <img src ="/assets/images/white-logo.png" style="padding-top: 10px ; padding-left :30px;">
 
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+
+        <a href="/" class="simple-text logo-normal">
+
+            <img src ="/assets/images/white-logo.png" style="padding-top: 10px ; padding-left :30px;" >
 
         </a>
     </div>
     <style>
         body {
-        overflow: hidden !important;
+        /* overflow: hidden !important; */
     }
     </style>
 {{-- sidebar --}}
@@ -25,7 +27,7 @@
             <a href="{{url('/admindashboard')}}">
 
 
-                  <i class="now-ui-icons design_app"></i>
+                  <i class="now-ui-icons design_app"  ></i>
 
                 <p style="color:rgb(251, 88, 73);  font-famile:  " >Dashboard</p>
 
