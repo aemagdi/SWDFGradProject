@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Parisan Restaurant</title>
+    <title>Parisian Restaurant</title>
     <!--
 
 TemplateMo 558 Klassy Cafe
@@ -32,6 +32,9 @@ https://templatemo.com/tm-558-klassy-cafe
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 
 </head>
 
@@ -92,19 +95,25 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
 
                             <li class="scroll-to-section" style="padding-top: 9px; font-weight:600">
-                                @auth <a href="{{ url('/showcart', Auth::id()) }}">Cart[{{ $count }}] </a>
-                                    @endauth @guest Cart[0] @endguest </li>
+                                @auth <a href="{{ url('/showcart', Auth::id()) }}">
+                                    <i class="fa" style="font-size:30px" >&#xf07a;</i>
+                                   <span class='badge badge-warning' id='lblCartCount'>{{ $count }} </span>
+                                     </a>
+                                    @endauth @guest
+                                    <i class="fa" style="font-size:30px" >&#xf07a;</i>
+                                   <span class='badge badge-warning' id='lblCartCount'>0</span>
+                                    @endguest</li>
 
 
                                 @if (Auth::user())
                                 @if (Auth::user()->usertype == '1')
-                                <li class="scroll-to-section" style="background-color:rgb(238, 132, 132)">
+                                <li class="scroll-to-section">
                                  <a href="/admindashboard">Admin Dashboard</a>
                                  </li>
                                 @endif
 
                                 @else
-                                <li class="scroll-to-section" style="background-color:rgb(238, 132, 132)" hidden>
+                                <li class="scroll-to-section" hidden>
                                     <a href="/admindashboard">Admin Dashboard</a>
                                     </li>
                                 @endif
@@ -297,7 +306,7 @@ https://templatemo.com/tm-558-klassy-cafe
         <!-- ***** Chefs Area Ends ***** -->
 
         <!-- ***** Reservation Us Area Starts ***** -->
-        @ @include('reservations')
+         @include('reservations')
         <!-- ***** Reservation Area Ends ***** -->
 
         <!-- ***** Menu Area Starts ***** -->

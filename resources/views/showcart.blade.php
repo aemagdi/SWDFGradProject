@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Your Cart - The Parisian</title>
+    <title>Your cart at The Parisian</title>
     <!--
 
 TemplateMo 558 Klassy Cafe
@@ -32,10 +32,13 @@ https://templatemo.com/tm-558-klassy-cafe
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 
 </head>
 
-<body>
+<body style=" overflow-x: hidden;">
 
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -89,8 +92,11 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="/#reservation">Contact Us</a></li>
 
                             <li class="scroll-to-section">
-                                @auth <a href="{{ url('/showcart', Auth::id()) }}">Cart[{{ $count }}] </a>
-                                    @endauth @guest Cart[0] @endguest
+                                @auth <a href="{{ url('/showcart', Auth::id()) }}">
+                                    <i class="fa" style="font-size:30px" >&#xf07a;</i>
+                                   <span class='badge badge-warning' id='lblCartCount'>{{ $count }} </span>
+                                     </a>
+                                    @endauth
                                 </li>
                                 <li>
                                     @if (Route::has('login'))
@@ -182,23 +188,26 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
         @else
             <div id="top">
-                <table align="center" bgcolor=#e9967a border="2px">
+                <div class="container">
 
-
+                <table class="table table-striped" style="background-color: bisque;" border="2px">
+                    <thead class="thead-dark">
                     <tr>
-                        <th style="padding: 30px">Food name</th>
-                        <th style="padding: 30px">Price</th>
-                        <th style="padding: 30px">Quantity</th>
-                        <th style="padding: 30px">Total</th>
+                        <th scope="col">Food name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
                         {{-- <th style="padding: 30px">Image</th> --}}
                         {{-- <th style="padding: 30px">Action</th> --}}
-                        <th style="padding: 30px">Action</th>
+                        <th scope="col">Action</th>
 
                     </tr>
-                    <form action="{{ url('confirmorder') }}" method="POST">
+                    <form class="form-horizontal" action="{{ url('confirmorder') }}" method="POST">
                         @csrf
                         @foreach ($data as $data)
-                            <tr align="center">
+                        <tbody>
+                        
+                            <tr>
 
                                 <input type="text" name="foodname[]" value="{{ $data->title }}" hidden="">
                                 <td>{{ $data->title }}</td>
@@ -207,53 +216,54 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <input type="text" name="quantity[]" value="{{ $data->quantity }}" hidden="">
                                 <td>{{ $data->quantity }}</td>
                                 <td>${{ $data->price * $data->quantity }}</td>
+                                <td scope="col"><a href="{{ url('/deletecartitem', $data->food_id) }}">Delete</a></td>
 
                                 {{-- <td><img height="150" width="150" src="/foodimages/{{$data->image}}" alt="Not found"></td> --}}
                                 {{-- <td><a href="{{url('/editmenu',$data->id)}}">Edit</a></td> --}}
                             </tr>
+                        </thead>
                         @endforeach
-                        @foreach ($data2 as $data2)
-                            <tr style="position: relative; top: -50px; right:-490px">
+                        {{-- @foreach ($data2 as $data2)
+                            <tr style="position:relative; top:-100px ;left:900px;"> --}}
                                 {{-- class="btn btn-warning" --}}
-                                <td><a href="{{ url('/deletecartitem', $data2->id) }}">Delete</a></td>
-                            </tr>
-                        @endforeach
+                                {{-- <td align="center" scope="col"><a href="{{ url('/deletecartitem', $data2->id) }}">Delete</a></td>
+                            </tr> --}}
+                        </tbody>
+                        {{-- @endforeach --}}
 
 
                 </table>
+            </div>
+            <div></div>
                 <div align="center">
-                    <div style="background-color:#e9967a; height :60px; width:200px; padding: 15px; font-weight:bold"
-                        align="center">
-                        <tr>
-                            <td> Total Price = {{ $totalPrice->totalPrice }}</td>
-                        </tr>
-                    </div>
+                    <div style="background-color:#e9967a; height :50px; width:300px; padding: 15px; font-weight:bold;border-radius:8px;" align="center" ><tr><td>  Total Price = ${{$totalPrice->totalPrice}}</td> </tr></div>
                 </div>
 
                 {{-- all encompassing div --}}
                 <div align="center" style="padding: 10px">
                     <div>
-                        <button type="button" class="btn btn-primary" id="order">Order now</button>
+                        <button type="button" style="background-color: blue; width:120px;height:45px;border-radius:8px; color:white" id="order">Order Now</button>
+                        <button type="button" style="background-color: red; width:120px;height:45px;border-radius:8px; color:white" id="order"> <a href="{{ url('/emptycart', $data->user_id) }}" style="color: white">Empty Cart</a></button>
                     </div>
 
                     <div align="center" style="padding: 10px; display:none;" id="userdetails">
-                        <div style="padding:10px">
-                            <label style="padding: 10px">Name</label>
-                            <input type="text" name="name" placeholder="Name" pattern="[A-Za-z\s]{3,}" required="">
+                        <div  class="form-group" >
+                            <label class="control-label col-sm-2">Name</label>
+                            <input class="form-control" style="width: 200px" type="text" name="name" placeholder="Name" pattern="[A-Za-z\s]{3,}" required="">
                         </div>
-                        <div>
-                            <label style="padding: 10px">Phone number</label>
-                            <input type="text" name="phone" placeholder="Phone number" pattern="[0-9]{11}" required="">
+                        <div  class="form-group">
+                            <label class="control-label col-sm-2" >Phone number</label>
+                            <input class="form-control" style="width: 200px" type="text" name="phone" placeholder="Phone number" pattern="[0-9]{11}" required="">
                         </div>
-                        <div>
-                            <label style="padding: 10px">Address</label>
+                        <div  class="form-group">
+                            <label class="control-label col-sm-2" >Address</label>
                             {{-- pattern="[a-zA-Z0-9\s]+" --}}
-                            <input type="text" name="address" pattern="{5,}" placeholder="Address" required="">
+                            <input class="form-control" style="width: 200px" type="text" name="address" pattern="{5,}" placeholder="Address" required="">
                         </div>
-                        <div>
+                        <div  class="form-group">
                             {{-- <input class="btn btn-info" type="submit" value="Submit"> --}}
-                            <button type="submit" class="btn btn-success"> Submit</button>
-                            <button type="button" id="close" class="btn btn-danger">Close</button>
+                            <button type="submit"  style="background-color: blue; width:120px;height:45px;border-radius:8px; color:white" > Submit</button>
+                            <button type="button" id="close" style="background-color: blue; width:120px;height:45px;border-radius:8px; color:white">Close</button>
                             {{-- /(010|011|012|015|)\d{8}/ --}}
                         </div>
                     </div>
@@ -262,6 +272,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </form>
             </div>
         @endif
+      
 
 
 

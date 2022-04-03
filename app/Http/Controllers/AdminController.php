@@ -80,7 +80,7 @@ public function __construct() {
         $data->price= $request->price;
         $data->description= $request->description;
         $image = $request->image;
-        if($image){
+        if(isset($image)){
          $imagename = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('foodimages',$imagename);
         $data->image =$imagename;
@@ -133,7 +133,7 @@ public function __construct() {
         $data->name=$request->name;
         $data->description=$request->description;
         $image=$request->image;
-        if($image){
+        if(isset($image)){
          $imagename=time().".".$image->getClientOriginalExtension();
         $request->image->move('chefimages',$imagename);
         $data->image=$imagename;
@@ -162,7 +162,7 @@ public function __construct() {
             $data->save();}
 
             $userID = Auth::id();
-            if($userID){
+            if(isset($userID)){
             $data2=Cart::select('*')->where('user_id','=',$userID)->get();
             $data2->each->delete();
                 }

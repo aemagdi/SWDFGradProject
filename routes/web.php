@@ -80,6 +80,9 @@ Route::get('/deletereservation/{id}', [AdminController::class,"deleteReservation
 
 Route::get('/deleteorder/{id}', [AdminController::class,"deleteOrderAdmin"]); //function to delete orders in admin dashboard
 
+Route::get('/emptycart/{id}', [HomeController::class,"emptyCart"]);
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

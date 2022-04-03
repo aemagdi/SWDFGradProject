@@ -6,8 +6,10 @@
 <html lang="en">
     <head>
         @include('admin.admincss')
+        <title>ggg</title>
 
       </head>
+
 
   <body  style="background-image: url(/assets/images/MicrosoftTeams-image11.png) ;
   background-position: center; 
