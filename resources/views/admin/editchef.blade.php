@@ -7,7 +7,7 @@
     <head>
         <base href="/public">
         @include('admin.admincss')
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
@@ -35,7 +35,7 @@
             </div>
             <div class="mb-3">
                 <label  for="disabledTextInput" class="form-label">Old Picture</label>
-                <img height="150" width="150" src="/chefimages/{{$data->image}}" alt="Picture not found">            </div>
+                <img height="150" width="150" src="/chefimages/{{$data->image}}" alt="Picture not found"></div>
             <div class="mb-3">
                 <label  for="disabledTextInput" class="form-label">New Picture</label>
                 <input  class="form-control" type="file" style="color:blue ; width:300px" name="image" >
