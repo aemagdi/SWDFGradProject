@@ -6,7 +6,6 @@
 <html lang="en">
     <head>
         @include('admin.admincss')
-        <title>ggg</title>
 
       </head>
 
